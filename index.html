@@ -1,1278 +1,1072 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#081225">
-<meta name="description" content="Mahbub AI Creation — AI-assisted video editing, cartoon storytelling, and creative projects.">
-
-<title>Mahbub AI Creation | AI Video Editor & Cartoon Creator</title>
- }
-
-  .hero-buttons .btn {
-    padding: 12px 14px;
-  }
-
-  .hero h1 {
-    letter-spacing: -0.5px;
-    overflow-wrap: anywhere;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-buttons .btn {
-    transition: none;
-  }
-
-  .hero-buttons .btn:hover {
-    transform: none;
-  }
-}
- /* ===== MAHBUB AI PROJECT GALLERY ===== */
-
-.featured-gallery .project-card {
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #00e5ff44;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #111d35, #17112e);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.featured-gallery .project-card:hover {
-  transform: translateY(-6px);
-  border-color: #a855f7;
-  box-shadow: 0 10px 32px #00e5ff20,
-              0 0 20px #a855f733;
-}
-
-.project-thumbnail {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  background: #0b1024;
-}
-
-.project-thumbnail .project-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 0;
-  transition: transform .35s ease;
-}
-
-.project-card:hover .project-thumbnail .project-image {
-  transform: scale(1.05);
-}
-
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: white;
-  font-size: 42px;
-  background: #080d1c35;
-  text-shadow: 0 0 18px #00e5ff;
-}
-
-.project-content {
-  padding: 22px;
-}
-
-.project-content h3 {
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.project-content p {
-  color: #cbd5e1;
-  line-height: 1.8;
-}
-
-.project-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-.channel-art {
-  min-height: 190px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 24px;
-  text-align: center;
-  color: #00e5ff;
-  background: radial-gradient(
-    circle at top,
-    #31205a,
-    #10182b 72%
-  );
-  border-bottom: 1px solid #00e5ff44;
-}
-
-.channel-art span:first-child {
-  font-size: 48px;
-}
-
-.channel-art span:nth-child(2) {
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.channel-art span:last-child {
-  color: #c084fc;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 600px) {
-  .project-content {
-    padding: 17px;
-  }
-
-  .project-button {
-    max-width: 100%;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .featured-gallery .project-card,
-  .project-thumbnail .project-image {
-    transition: none;
-  }
-
-  .featured-gallery .project-card:hover,
-  .project-card:hover .project-thumbnail .project-image {
-    transform: none;
-  }
-}
- /* ===== MAHBUB AI CREATION: PROJECT GALLERY ===== */
-
-.featured-gallery {
-  padding: 70px 0;
-  scroll-margin-top: 90px;
-}
-
-.gallery-heading {
-  text-align: center;
-  margin-bottom: 38px;
-}
-
-.gallery-kicker {
-  display: inline-block;
-  color: #00e5ff;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 12px;
-}
-
-.gallery-heading h2 {
-  font-size: clamp(30px, 5vw, 46px);
-  margin: 0 0 14px;
-  line-height: 1.2;
-}
-
-.gallery-heading h2 span {
-  color: #00e5ff;
-  text-shadow: 0 0 18px #00e5ff55;
-}
-
-.gallery-heading .intro {
-  max-width: 650px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: #cbd5e1;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 26px;
-  align-items: start;
-}
-
-.project-card {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid #00e5ff40;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #111d35, #17112e);
-  box-shadow: 0 8px 28px #00000022;
-  transition: transform .3s ease, border-color .3s ease,
-              box-shadow .3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: #00e5ff;
-  box-shadow: 0 12px 35px #00e5ff1c;
-}
-
-.project-thumbnail {
-  position: relative;
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #0b1024;
-  text-decoration: none;
-}
-
-.project-thumbnail img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .35s ease;
-}
-
-.project-card:hover .project-thumbnail img {
-  transform: scale(1.05);
-}
-
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-size: 42px;
-  text-shadow: 0 0 20px #00e5ff;
-  background: #080d1c35;
-  transition: background .3s ease;
-}
-
-.project-thumbnail:hover .play-overlay {
-  background: #080d1c65;
-}
-
-.thumbnail-label {
-  position: absolute;
-  left: 14px;
-  top: 14px;
-  padding: 7px 11px;
-  border: 1px solid #00e5ff70;
-  border-radius: 20px;
-  background: #081225df;
-  color: #00e5ff;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.project-content {
-  padding: 22px;
-}
-
-.project-tag {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: #c084fc;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.project-content h3 {
-  margin: 0 0 12px;
-  font-size: 21px;
-  line-height: 1.55;
-  overflow-wrap: anywhere;
-}
-
-.project-content p {
-  color: #cbd5e1;
-  line-height: 1.8;
-  font-size: 14px;
-}
-
-.project-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  max-width: 100%;
-  margin: 8px 0 12px;
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-.video-section {
-  margin-top: 22px;
-  padding-top: 20px;
-  border-top: 1px solid #00e5ff30;
-}
-
-.video-section h4 {
-  margin: 0 0 14px;
-  font-size: 16px;
-}
-
-.video-section h4 span {
-  color: #00e5ff;
-  margin-right: 7px;
-}
-
-.video-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 1px solid #00e5ff55;
-  border-radius: 12px;
-  background: #050816;
-}
-
-.video-frame iframe {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.channel-art {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 13px;
-  color: #00e5ff;
-  background:
-    radial-gradient(circle at 50% 20%, #492a78, transparent 55%),
-    linear-gradient(145deg, #101a32, #080d1c);
-}
-
-.detective-icon {
-  font-size: 56px;
-  filter: drop-shadow(0 0 12px #00e5ff66);
-}
-
-.channel-title {
-  font-size: clamp(15px, 2vw, 22px);
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.channel-subtitle {
-  color: #c084fc;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-@media (max-width: 760px) {
-  .featured-gallery {
-    padding: 48px 0;
-  }
-
-  .project-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 22px;
-  }
-
-  .gallery-heading {
-    margin-bottom: 28px;
-  }
-
-  .project-content {
-    padding: 18px;
-  }
-
-  .project-content h3 {
-    font-size: 19px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .project-card,
-  .project-thumbnail img,
-  .play-overlay {
-    transition: none;
-  }
-
-  .project-card:hover,
-  .project-card:hover .project-thumbnail img {
-    transform: none;
-  }
-}
-<style>
-:root {
-  --bg: #081225;
-  --panel: #111d35;
-  --text: #f4f7ff;
-  --muted: #b8c4dc;
-  --blue: #70a5ff;
-  --violet: #c2a3ff;
-  --line: #263754;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 20px;
-}
-
-body {
-  margin: 0;
-  background:
-    radial-gradient(circle at 80% 0%, #1e2d60 0, transparent 32rem),
-    var(--bg);
-  color: var(--text);
-  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:focus-visible {
-  outline: 2px solid var(--violet);
-  outline-offset: 4px;
-}
-
-.wrap {
-  width: min(1080px, 92%);
-  margin: auto;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
-  flex-wrap: wrap;
-}
-
-.brand {
-  color: var(--text);
-  font-weight: 800;
-  letter-spacing: .04em;
-}
-
-.navlinks {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  font-size: .94rem;
-}
-
-.hero {
-  padding: 76px 0 58px;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 34px;
-  align-items: center;
-}
-
-.kicker {
-  color: var(--violet);
-  font-size: .82rem;
-  font-weight: 800;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  line-height: 1.03;
-  letter-spacing: -.04em;
-  margin: 14px 0 20px;
-}
-
-h1 span {
-  color: var(--blue);
-}
-
-.lead {
-  color: var(--muted);
-  font-size: 1.15rem;
-  max-width: 680px;
-}
-
-.actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 28px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 12px;
-  border: 1px solid #42639a;
-  font-weight: 700;
-  transition: transform .2s, background .2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
-.primary {
-  background: linear-gradient(110deg, #4f8cff, #9670ff);
-  border: 0;
-  color: #081225;
-}
-
-.visual {
-  min-height: 280px;
-  border: 1px solid #344a78;
-  border-radius: 28px;
-  background: linear-gradient(145deg, #172e58, #291e4b 65%, #101a30);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 20px 60px #0005;
-}
-
-.visual .symbol {
-  font-size: 4rem;
-}
-
-.visual strong {
-  font-size: 1.45rem;
-  line-height: 1.2;
-}
-
-.visual p {
-  color: var(--muted);
-  margin-bottom: 0;
-}
-
-section {
-  padding: 34px 0 48px;
-  scroll-margin-top: 20px;
-}
-
-h2 {
-  font-size: 1.8rem;
-  letter-spacing: -.02em;
-  margin: 0 0 8px;
-}
-
-.intro {
-  color: var(--muted);
-  margin: 0 0 22px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.card {
-  min-width: 0;
-  padding: 22px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: linear-gradient(145deg, #111d35, #0d172a);
-  transition: border-color .2s, transform .2s;
-}
-
-.card:hover {
-  border-color: #5275ad;
-  transform: translateY(-2px);
-}
-
-.card h3 {
-  margin: 0 0 8px;
-}
-
-.card p {
-  color: var(--muted);
-  margin: 0 0 12px;
-}
-
-.pill {
-  display: inline-block;
-  font-size: .82rem;
-  color: #d9e5ff;
-  border: 1px solid #344b77;
-  border-radius: 999px;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
-}
-
-.links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.linkcard {
-  display: block;
-  padding: 17px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #101b30;
-  transition: border-color .2s, transform .2s;
-}
-
-.linkcard:hover {
-  border-color: var(--blue);
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
-.linkcard strong {
-  display: block;
-  color: var(--text);
-}
-
-.linkcard small {
-  display: block;
-  color: var(--muted);
-  overflow-wrap: anywhere;
-}
-
-.project-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 12px 0;
-}
-
-.video-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-top: 16px;
-  background: #000;
-}
-
-.video-frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.note {
-  border-left: 3px solid var(--violet);
-  padding: 12px 16px;
-  color: var(--muted);
-  background: #111a2e;
-  border-radius: 0 12px 12px 0;
-}
-
-footer {
-  border-top: 1px solid var(--line);
-  padding: 25px 0 40px;
-  color: var(--muted);
-  font-size: .92rem;
-}
-
-@media (max-width: 720px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding-top: 48px;
-  }
-
-  .visual {
-    min-height: 220px;
-  }
-
-  .grid,
-  .links {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    align-items: flex-start;
-  }
-
-  .navlinks {
-    gap: 10px 14px;
-  }
-
-  .navlinks a {
-    font-size: .9rem;
-  }
-
-  h1 {
-    font-size: clamp(2.4rem, 11vw, 3.6rem);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-  }
-}
-  /* AI CYBER DESIGN */
-:root {
-  --bg: #070b18;
-  --text: #edf4ff;
-  --blue: #00e5ff;
-  --violet: #a855f7;
-  --line: #263754;
-}
-
-body {
-  background:
-    radial-gradient(ellipse at top, #18214a, transparent 55%),
-    var(--bg);
-  color: var(--text);
-}
-
-h1, h2, h3 {
-  color: var(--blue);
-  text-shadow: 0 0 14px #00e5ff55;
-}
-
-.visual, .card, .linkcard, .note {
-  border-color: #00e5ff55;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.visual:hover, .card:hover, .linkcard:hover {
-  transform: translateY(-5px);
-  border-color: var(--violet);
-  box-shadow: 0 0 24px #a855f744;
-}
-
-.primary {
-  background: linear-gradient(110deg, #00e5ff, #a855f7);
-  color: #070b18;
-}
-
-@keyframes cyberGlow {
-  0%, 100% { text-shadow: 0 0 10px #00e5ff55; }
-  50% { text-shadow: 0 0 24px #00e5ffbb, 0 0 36px #a855f755; }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .hero h1 {
-    animation: cyberGlow 3s ease-in-out infinite;
-  }
-}
-
-@media (max-width: 600px) {
-  .grid, .links {
-    grid-template-columns: 1fr;
-  }
-}
-  /* ===== MAHBUB AI CYBER COMPLETE DESIGN ===== */
-
-/* 1. HERO SECTION GLOW */
-.hero {
-  position: relative;
-}
-
-.hero h1 {
-  color: #edf4ff;
-  text-shadow: 0 0 16px #00e5ff55;
-}
-
-.hero h1 span {
-  color: #00e5ff;
-}
-
-.kicker {
-  color: #c084fc;
-}
-
-.visual {
-  position: relative;
-  overflow: hidden;
-  border-color: #00e5ff88;
-  background: linear-gradient(135deg, #10182b, #211344, #0b2338);
-  box-shadow: 0 0 28px #00e5ff18;
-}
-
-.visual .symbol {
-  color: #00e5ff;
-  text-shadow: 0 0 24px #00e5ff88;
-}
-
-@keyframes mahbubGlow {
-  0%, 100% {
-    text-shadow: 0 0 10px #00e5ff55;
-  }
-  50% {
-    text-shadow: 0 0 25px #00e5ffbb, 0 0 38px #a855f766;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .hero h1 {
-    animation: mahbubGlow 3s ease-in-out infinite;
-  }
-
-  .visual {
-    animation: mahbubFloat 5s ease-in-out infinite;
-  }
-}
-
-@keyframes mahbubFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-/* 2. SOCIAL MEDIA BUTTONS */
-.linkcard {
-  background: linear-gradient(135deg, #10182b, #171333);
-  border: 1px solid #00e5ff44;
-  border-radius: 16px;
-  padding: 19px;
-  box-shadow: 0 5px 22px #0003;
-  overflow-wrap: anywhere;
-}
-
-.linkcard strong {
-  color: #00e5ff;
-  margin-bottom: 5px;
-}
-
-.linkcard small {
-  color: #b8c4dc;
-}
-
-.linkcard:hover {
-  border-color: #a855f7;
-  box-shadow: 0 0 22px #a855f744;
-  text-decoration: none;
-}
-
-/* 3. FEATURED PROJECTS */
-#featured .card {
-  background: linear-gradient(145deg, #111d35, #17112e);
-  border: 1px solid #00e5ff44;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.project-image {
-  border: 1px solid #a855f744;
-  transition: transform .3s ease, filter .3s ease;
-}
-
-.project-image:hover {
-  transform: scale(1.02);
-  filter: brightness(1.08);
-}
-
-.video-frame {
-  border: 1px solid #00e5ff66;
-  box-shadow: 0 0 22px #00e5ff22;
-}
-
-/* 4. BUTTONS */
-.btn {
-  border-radius: 12px;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.btn.primary {
-  background: linear-gradient(110deg, #00e5ff, #a855f7);
-  color: #070b18;
-  box-shadow: 0 0 16px #00e5ff33;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px #a855f755;
-}
-
-/* 5. ALL CARDS */
-.card {
-  background: linear-gradient(145deg, #111d35, #101126);
-  border-color: #00e5ff33;
-  border-radius: 18px;
-}
-
-.card:hover {
-  border-color: #a855f7;
-  box-shadow: 0 0 22px #a855f733;
-}
-
-/* 6. HEADINGS AND CONTACT */
-h2 {
-  color: #00e5ff;
-}
-
-.note {
-  border-left-color: #a855f7;
-  background: #11182b;
-}
-
-footer {
-  border-top-color: #00e5ff33;
-}
-
-/* 7. MOBILE RESPONSIVE */
-@media (max-width: 720px) {
-  .wrap {
-    width: 92%;
-  }
-
-  nav {
-    gap: 12px;
-  }
-
-  .navlinks {
-    gap: 10px;
-  }
-
-  .hero {
-    gap: 22px;
-    padding-top: 42px;
-  }
-
-  .hero h1 {
-    overflow-wrap: anywhere;
-  }
-
-  .grid, .links {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .visual {
-    min-height: 230px;
-  }
-
-  .video-frame {
-    width: 100%;
-  }
-
-  .actions .btn {
-    text-align: center;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b18">
+  <meta name="description" content="Mahbub AI Creation — AI video editing, cartoon storytelling, animation and creative projects.">
+
+  <title>Mahbub AI Creation | AI Video Editor &amp; Cartoon Creator</title>
+
+  <style>
+    /* ========================================
+       MAHBUB AI CREATION — CYBER PORTFOLIO
+       Clean, responsive, single stylesheet
+    ======================================== */
+
+    :root {
+      color-scheme: dark;
+      --bg: #070b18;
+      --panel: #10182b;
+      --panel-light: #141d35;
+      --text: #edf4ff;
+      --muted: #b8c4dc;
+      --cyan: #00e5ff;
+      --purple: #a855f7;
+      --line: #263754;
+      --radius: 18px;
+      --glow: 0 0 24px #00e5ff22;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 50% -10%, #25205a 0, transparent 45rem),
+        radial-gradient(circle at 100% 45%, #07304444, transparent 35rem),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 4px;
+      border-radius: 5px;
+    }
+
+    img,
+    iframe {
+      max-width: 100%;
+    }
+
+    .wrap {
+      width: min(1120px, 92%);
+      margin-inline: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid #00e5ff30;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      white-space: normal;
+    }
+
+    .brand:hover {
+      color: var(--cyan);
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 17px;
+      flex-wrap: wrap;
+    }
+
+    .navlinks a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .navlinks a:hover {
+      color: var(--cyan);
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.85fr);
+      align-items: center;
+      gap: 38px;
+      padding: 82px 0 64px;
+    }
+
+    .kicker {
+      display: inline-block;
+      color: #c084fc;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 15px 0 22px;
+      color: var(--text);
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      overflow-wrap: anywhere;
+      text-shadow: 0 0 22px #00e5ff22;
+    }
+
+    .hero h1 span {
+      display: inline;
+      color: var(--cyan);
+      text-shadow: 0 0 20px #00e5ff55;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      max-width: 100%;
+      padding: 12px 18px;
+      border: 1px solid #00e5ff66;
+      border-radius: 12px;
+      background: #10182b;
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 750;
+      line-height: 1.5;
+      text-align: center;
+      overflow-wrap: anywhere;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px #00e5ff30;
+    }
+
+    .btn.primary {
+      border-color: transparent;
+      background: linear-gradient(110deg, var(--cyan), var(--purple));
+      color: #070b18;
+      box-shadow: 0 0 18px #00e5ff20;
+    }
+
+    .btn.primary:hover {
+      box-shadow: 0 0 26px #a855f755;
+    }
+
+    .visual {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      min-height: 290px;
+      padding: 27px;
+      overflow: hidden;
+      border: 1px solid #00e5ff66;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at 80% 10%, #a855f733, transparent 50%),
+        linear-gradient(145deg, #10182b, #211344, #0b2338);
+      box-shadow: var(--glow), 0 20px 55px #0005;
+    }
+
+    .visual::before {
+      position: absolute;
+      top: -65px;
+      right: -65px;
+      width: 180px;
+      height: 180px;
+      border: 1px solid #00e5ff40;
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 35px #00e5ff15;
+      pointer-events: none;
+    }
+
+    .visual .symbol {
+      color: var(--cyan);
+      font-size: 3.7rem;
+      line-height: 1.3;
+      text-shadow: 0 0 24px #00e5ff88;
+    }
+
+    .visual strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.5rem;
+      line-height: 1.35;
+    }
+
+    .visual p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 38px 0 48px;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      margin: 0 0 10px;
+      color: var(--cyan);
+      font-size: clamp(1.7rem, 4vw, 2.25rem);
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      text-shadow: 0 0 14px #00e5ff22;
+    }
+
+    .intro {
+      margin: 0 0 24px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 23px;
+      border: 1px solid #00e5ff38;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, #111d35, #101126);
+      box-shadow: 0 8px 26px #0002;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #a855f7;
+      box-shadow: 0 0 22px #a855f72b;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--cyan);
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* SERVICES */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .pill {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      padding: 5px 11px;
+      border: 1px solid #00e5ff44;
+      border-radius: 999px;
+      background: #00e5ff08;
+      color: #d9e5ff;
+      font-size: 0.8rem;
+    }
+
+    /* SOCIAL LINKS */
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .linkcard {
+      display: block;
+      min-width: 0;
+      padding: 19px;
+      overflow-wrap: anywhere;
+      border: 1px solid #00e5ff40;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #10182b, #171333);
+      box-shadow: 0 5px 22px #0003;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .linkcard:hover {
+      transform: translateY(-3px);
+      border-color: var(--purple);
+      box-shadow: 0 0 22px #a855f744;
+    }
+
+    .linkcard strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--cyan);
+      font-size: 1rem;
+    }
+
+    .linkcard small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    /* FEATURED PROJECTS */
+
+    .featured-gallery {
+      padding: 60px 0;
+    }
+
+    .gallery-heading {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .gallery-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 850;
+      letter-spacing: 3px;
+    }
+
+    .gallery-heading h2 {
+      margin-bottom: 12px;
+    }
+
+    .gallery-heading h2 span {
+      color: var(--purple);
+      text-shadow: 0 0 18px #a855f744;
+    }
+
+    .gallery-heading .intro {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 25px;
+    }
+
+    .project-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #00e5ff44;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #111d35, #17112e);
+      box-shadow: 0 8px 28px #0003;
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--purple);
+      box-shadow: 0 12px 35px #00e5ff20, 0 0 20px #a855f733;
+    }
+
+    .project-thumbnail {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #0b1024;
+    }
+
+    .project-thumbnail img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .project-card:hover .project-thumbnail img {
+      transform: scale(1.05);
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 43px;
+      text-shadow: 0 0 20px var(--cyan);
+      background: #080d1c35;
+      transition: background 0.25s ease;
+    }
+
+    .project-thumbnail:hover .play-overlay {
+      background: #080d1c65;
+    }
+
+    .thumbnail-label {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      padding: 6px 10px;
+      border: 1px solid #00e5ff70;
+      border-radius: 20px;
+      background: #081225df;
+      color: var(--cyan);
+      font-size: 0.65rem;
+      font-weight: 850;
+      letter-spacing: 1px;
+    }
+
+    .project-content {
+      padding: 22px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #c084fc;
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: 1.4px;
+    }
+
+    .project-content h3 {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 1.25rem;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .project-button {
+      margin: 8px 0 12px;
+    }
+
+    .video-section {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid #00e5ff30;
+    }
+
+    .video-section h4 {
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .video-section h4 span {
+      margin-right: 7px;
+      color: var(--cyan);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid #00e5ff55;
+      border-radius: 12px;
+      background: #050816;
+      box-shadow: 0 0 22px #00e5ff15;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* DETECTIVE AYAN CHANNEL CARD */
+
+    .channel-art {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      width: 100%;
+      height: 100%;
+      min-height: 190px;
+      padding: 24px;
+      text-align: center;
+      color: var(--cyan);
+      background:
+        radial-gradient(circle at 50% 20%, #492a78, transparent 55%),
+        linear-gradient(145deg, #101a32, #080d1c);
+    }
+
+    .detective-icon {
+      font-size: 52px;
+      filter: drop-shadow(0 0 12px #00e5ff66);
+    }
+
+    .channel-title {
+      color: var(--cyan);
+      font-size: clamp(15px, 2vw, 22px);
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .channel-subtitle {
+      color: #c084fc;
+      font-size: 0.7rem;
+      font-weight: 750;
+      letter-spacing: 2px;
+    }
+
+    /* CONTACT AND FOOTER */
+
+    .note {
+      padding: 13px 16px;
+      border-left: 3px solid var(--purple);
+      border-radius: 0 12px 12px 0;
+      background: #11182b;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 25px 0 38px;
+      border-top: 1px solid #00e5ff30;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    /* KEYBOARD ACCESSIBILITY */
+
+    .btn:focus-visible,
+    .linkcard:focus-visible,
+    .project-thumbnail:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 800px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        gap: 10px 16px;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+        padding: 55px 0 40px;
+      }
+
+      .visual {
+        min-height: 225px;
+      }
+
+      .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .featured-gallery {
+        padding: 42px 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrap {
+        width: 91%;
+      }
+
+      .brand {
+        font-size: 0.92rem;
+      }
+
+      .navlinks {
+        gap: 9px 13px;
+      }
+
+      .navlinks a {
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 11vw, 3.5rem);
+        letter-spacing: -1.2px;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+
+      .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .actions .btn {
+        width: 100%;
+      }
+
+      .grid,
+      .links {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .card,
+      .project-content {
+        padding: 18px;
+      }
+
+      .gallery-kicker {
+        letter-spacing: 2px;
+      }
+
+      .project-content h3 {
+        font-size: 1.12rem;
+      }
+
+      .project-button {
+        width: 100%;
+      }
+
+      section {
+        padding: 30px 0 38px;
+      }
+    }
+
+    /* MOTION ACCESSIBILITY */
+
+    @keyframes mahbubGlow {
+      0%, 100% {
+        text-shadow: 0 0 10px #00e5ff33;
+      }
+      50% {
+        text-shadow: 0 0 24px #00e5ff88, 0 0 36px #a855f755;
+      }
+    }
+
+    @keyframes mahbubFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero h1 {
+        animation: mahbubGlow 4s ease-in-out infinite;
+      }
+
+      .visual {
+        animation: mahbubFloat 6s ease-in-out infinite;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .btn:hover,
+      .card:hover,
+      .linkcard:hover,
+      .project-card:hover {
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="wrap">
+  <div class="wrap">
 
-<nav>
-  <a class="brand" href="#top">MAHBUB AI CREATION</a>
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#top">MAHBUB AI CREATION</a>
 
-  <div class="navlinks">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#work">My Links</a>
-    <a href="#featured">Featured Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">My Links</a>
+        <a href="#featured">Featured Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-<main id="top">
+    <main id="top">
 
-<div class="hero">
-  <div>
-    <div class="kicker">Creative Visual Storytelling</div>
-    <h1>Welcome to My <span>Creative World</span></h1>
-<p class="lead">
-  I create engaging AI-assisted videos, cinematic cartoon stories,
-  and creative 2D and 3D animation projects for YouTube and digital platforms.
-</p>
+      <!-- HERO SECTION -->
+      <div class="hero">
+        <div>
+          <div class="kicker">Creative Visual Storytelling</div>
 
-<div class="actions hero-buttons">
-  <a class="btn primary" href="#featured">
-    ✨ Explore My Work
-  </a>
+          <h1>Welcome to My <span>Creative World</span></h1>
 
-  <a class="btn" href="https://www.youtube.com/@DetectiveAyan26"
-     target="_blank" rel="noopener noreferrer">
-    ▶ Watch My Videos
-  </a>
-</div>
+          <p class="lead">
+            I create engaging AI-assisted videos, cinematic cartoon stories,
+            and creative 2D and 3D animation projects for YouTube and digital platforms.
+          </p>
 
-  </div>
+          <div class="actions hero-buttons">
+            <a class="btn primary" href="#featured">
+              ✨ Explore My Work
+            </a>
 
-  <div class="visual">
-    <div class="symbol" aria-hidden="true">▶ ✦ 🎬</div>
-    <div>
-      <strong>Ideas into visual stories.</strong>
-      <p>AI Video Editing · 2D Cartoon · 3D Cartoon</p>
-    </div>
-  </div>
-</div>
+            <a class="btn"
+               href="https://www.youtube.com/@DetectiveAyan26"
+               target="_blank"
+               rel="noopener noreferrer">
+              ▶ Watch My Videos
+            </a>
+          </div>
+        </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p class="intro">
-    A creative portfolio for AI-assisted video editing and cartoon content creation.
-  </p>
-
-  <div class="card">
-    <p>
-      I enjoy turning ideas into engaging visual content using AI-assisted
-      creative tools, scene generation, character concepts, and video editing.
-      I am interested in suitable remote opportunities, freelance projects,
-      and creative collaborations. Explore my channels and social profiles
-      to see my creative work.
-    </p>
-  </div>
-</section>
-
-<section id="services">
-  <h2>Services &amp; Skills</h2>
-  <p class="intro">
-    Areas I work on or am developing in my creative workflow.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>🎬 AI Video Editing</h3>
-      <p>Editing and assembling AI-assisted video content for digital platforms.</p>
-      <span class="pill">Video Editing</span>
-      <span class="pill">Short-form Content</span>
-    </div>
-
-    <div class="card">
-      <h3>🎨 2D Cartoon Creation</h3>
-      <p>Cartoon-style visuals and story-driven scenes for animated content.</p>
-      <span class="pill">2D Cartoon</span>
-      <span class="pill">Visual Storytelling</span>
-    </div>
-
-    <div class="card">
-      <h3>🧊 3D Cartoon Creation</h3>
-      <p>3D cartoon concepts and animated-story content using creative tools.</p>
-      <span class="pill">3D Cartoon</span>
-      <span class="pill">Animation Concepts</span>
-    </div>
-
-    <div class="card">
-      <h3>🖼️ Character &amp; Scene Design</h3>
-      <p>Developing character visuals and scene concepts to support a story.</p>
-      <span class="pill">Character Design</span>
-      <span class="pill">Scene Generation</span>
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  <h2>Channels &amp; Social Profiles</h2>
-  <p class="intro">
-    Explore my YouTube channels and social profiles.
-  </p>
-
-  <div class="links">
-    <a class="linkcard"
-       href="https://www.youtube.com/@DetectiveAyan26"
-       target="_blank" rel="noopener noreferrer">
-      <strong>Detective Ayan</strong>
-      <small>YouTube channel ↗</small>
-    </a>
-
-    <a class="linkcard"
-       href="https://www.youtube.com/@AnnafiBraveheartBoy26"
-       target="_blank" rel="noopener noreferrer">
-      <strong>Annafi Braveheart Boy</strong>
-      <small>YouTube channel ↗</small>
-    </a>
-
-    <a class="linkcard"
-       href="https://www.facebook.com/0MahBubuR0"
-       target="_blank" rel="noopener noreferrer">
-      <strong>Facebook</strong>
-      <small>Profile / page ↗</small>
-    </a>
-
-    <a class="linkcard"
-       href="https://x.com/mahbubur_m99646"
-       target="_blank" rel="noopener noreferrer">
-      <strong>X</strong>
-      <small>@mahbubur_m99646 ↗</small>
-    </a>
-
-    <a class="linkcard"
-       href="https://www.instagram.com/mr3115322026/"
-       target="_blank" rel="noopener noreferrer">
-      <strong>Instagram</strong>
-      <small>@mr3115322026 ↗</small>
-    </a>
-  </div>
-</section>
-<section id="featured" class="featured-gallery">
-  <div class="gallery-heading">
-    <span class="gallery-kicker">MY CREATIVE PORTFOLIO</span>
-    <h2>Featured <span>Projects</span></h2>
-    <p class="intro">
-      Explore my AI cartoon stories, cinematic animation
-      and creative video projects.
-    </p>
-  </div>
-
-  <div class="project-grid">
-
-    <!-- Project 1: Annafi Cartoon Story -->
-    <article class="project-card">
-
-      <a class="project-thumbnail"
-         href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Watch Annafi cartoon story on YouTube">
-
-        <img
-          src="https://img.youtube.com/vi/cxDaNDc3ehY/hqdefault.jpg"
-          alt="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
-          loading="lazy">
-
-        <span class="play-overlay" aria-hidden="true">
-          ▶
-        </span>
-
-        <span class="thumbnail-label">FEATURED VIDEO</span>
-      </a>
-
-      <div class="project-content">
-        <span class="project-tag">AI CARTOON STORY</span>
-
-        <h3>বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান</h3>
-
-        <p>
-          An exciting AI-assisted cartoon adventure with
-          cinematic storytelling and animation.
-        </p>
-
-        <a class="btn primary project-button"
-           href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-           target="_blank"
-           rel="noopener noreferrer">
-          ▶ Watch on YouTube
-        </a>
-
-        <div class="video-section">
-          <h4><span>▶</span> Watch Video Here</h4>
-
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/cxDaNDc3ehY"
-              title="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
+        <div class="visual">
+          <div class="symbol" aria-hidden="true">▶ ✦ 🎬</div>
+          <div>
+            <strong>Ideas into visual stories.</strong>
+            <p>AI Video Editing · 2D Cartoon · 3D Cartoon</p>
           </div>
         </div>
       </div>
-    </article>
 
-    <!-- Project 2: Detective Ayan -->
-    <article class="project-card">
-
-      <a class="project-thumbnail channel-thumbnail"
-         href="https://www.youtube.com/@DetectiveAyan26"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="Explore Detective Ayan YouTube channel">
-
-        <div class="channel-art">
-          <span class="detective-icon" aria-hidden="true">🕵️</span>
-          <span class="channel-title">DETECTIVE AYAN</span>
-          <span class="channel-subtitle">AI CARTOON STORIES</span>
-        </div>
-
-        <span class="play-overlay" aria-hidden="true">
-          ▶
-        </span>
-      </a>
-
-      <div class="project-content">
-        <span class="project-tag">CARTOON &amp; ANIMATION</span>
-
-        <h3>Detective Ayan</h3>
-
-        <p>
-          Discover detective adventures, imaginative cartoon
-          stories and creative animation projects.
+      <!-- ABOUT -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p class="intro">
+          A creative portfolio for AI-assisted video editing and cartoon content creation.
         </p>
 
-        <a class="btn primary project-button"
-           href="https://www.youtube.com/@DetectiveAyan26"
-           target="_blank"
-           rel="noopener noreferrer">
-          Explore Detective Ayan ↗
-        </a>
-      </div>
-    </article>
+        <div class="card">
+          <p>
+            I enjoy turning ideas into engaging visual content using AI-assisted
+            creative tools, scene generation, character concepts, and video editing.
+            I am interested in suitable remote opportunities, freelance projects,
+            and creative collaborations. Explore my channels and social profiles
+            to see my creative work.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <h2>Services &amp; Skills</h2>
+        <p class="intro">
+          Areas I work on or am developing in my creative workflow.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>🎬 AI Video Editing</h3>
+            <p>Editing and assembling AI-assisted video content for digital platforms.</p>
+            <span class="pill">Video Editing</span>
+            <span class="pill">Short-form Content</span>
+          </div>
+
+          <div class="card">
+            <h3>🎨 2D Cartoon Creation</h3>
+            <p>Cartoon-style visuals and story-driven scenes for animated content.</p>
+            <span class="pill">2D Cartoon</span>
+            <span class="pill">Visual Storytelling</span>
+          </div>
+
+          <div class="card">
+            <h3>🧊 3D Cartoon Creation</h3>
+            <p>3D cartoon concepts and animated-story content using creative tools.</p>
+            <span class="pill">3D Cartoon</span>
+            <span class="pill">Animation Concepts</span>
+          </div>
+
+          <div class="card">
+            <h3>🖼️ Character &amp; Scene Design</h3>
+            <p>Developing character visuals and scene concepts to support a story.</p>
+            <span class="pill">Character Design</span>
+            <span class="pill">Scene Generation</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOCIAL LINKS -->
+      <section id="work">
+        <h2>Channels &amp; Social Profiles</h2>
+        <p class="intro">
+          Explore my YouTube channels and social profiles.
+        </p>
+
+        <div class="links">
+          <a class="linkcard"
+             href="https://www.youtube.com/@DetectiveAyan26"
+             target="_blank"
+             rel="noopener noreferrer">
+            <strong>Detective Ayan</strong>
+            <small>YouTube channel ↗</small>
+          </a>
+
+          <a class="linkcard"
+             href="https://www.youtube.com/@AnnafiBraveheartBoy26"
+             target="_blank"
+             rel="noopener noreferrer">
+            <strong>Annafi Braveheart Boy</strong>
+            <small>YouTube channel ↗</small>
+          </a>
+
+          <a class="linkcard"
+             href="https://www.facebook.com/0MahBubuR0"
+             target="_blank"
+             rel="noopener noreferrer">
+            <strong>Facebook</strong>
+            <small>Profile / page ↗</small>
+          </a>
+
+          <a class="linkcard"
+             href="https://x.com/mahbubur_m99646"
+             target="_blank"
+             rel="noopener noreferrer">
+            <strong>X</strong>
+            <small>@mahbubur_m99646 ↗</small>
+          </a>
+
+          <a class="linkcard"
+             href="https://www.instagram.com/mr3115322026/"
+             target="_blank"
+             rel="noopener noreferrer">
+            <strong>Instagram</strong>
+            <small>@mr3115322026 ↗</small>
+          </a>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section id="featured" class="featured-gallery">
+        <div class="gallery-heading">
+          <span class="gallery-kicker">MY CREATIVE PORTFOLIO</span>
+          <h2>Featured <span>Projects</span></h2>
+          <p class="intro">
+            Explore my AI cartoon stories, cinematic animation
+            and creative video projects.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- ANNAFI CARTOON STORY -->
+          <article class="project-card">
+            <a class="project-thumbnail"
+               href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Watch Annafi cartoon story on YouTube">
+
+              <img
+                src="https://img.youtube.com/vi/cxDaNDc3ehY/hqdefault.jpg"
+                alt="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
+                loading="lazy">
+
+              <span class="play-overlay" aria-hidden="true">▶</span>
+              <span class="thumbnail-label">FEATURED VIDEO</span>
+            </a>
+
+            <div class="project-content">
+              <span class="project-tag">AI CARTOON STORY</span>
+
+              <h3>বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান</h3>
+
+              <p>
+                An exciting AI-assisted cartoon adventure with
+                cinematic storytelling and animation.
+              </p>
+
+              <a class="btn primary project-button"
+                 href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                ▶ Watch on YouTube
+              </a>
+
+              <div class="video-section">
+                <h4><span>▶</span> Watch Video Here</h4>
+
+                <div class="video-frame">
+                  <iframe
+                    src="https://www.youtube.com/embed/cxDaNDc3ehY"
+                    title="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- DETECTIVE AYAN -->
+          <article class="project-card">
+            <a class="project-thumbnail channel-thumbnail"
+               href="https://www.youtube.com/@DetectiveAyan26"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Explore Detective Ayan YouTube channel">
+
+              <div class="channel-art">
+                <span class="detective-icon" aria-hidden="true">🕵️</span>
+                <span class="channel-title">DETECTIVE AYAN</span>
+                <span class="channel-subtitle">AI CARTOON STORIES</span>
+              </div>
+
+              <span class="play-overlay" aria-hidden="true">▶</span>
+            </a>
+
+            <div class="project-content">
+              <span class="project-tag">CARTOON &amp; ANIMATION</span>
+
+              <h3>Detective Ayan</h3>
+
+              <p>
+                Discover detective adventures, imaginative cartoon
+                stories and creative animation projects.
+              </p>
+
+              <a class="btn primary project-button"
+                 href="https://www.youtube.com/@DetectiveAyan26"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Explore Detective Ayan ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Remote &amp; Freelance Opportunities</h2>
+
+        <div class="card">
+          <p>
+            I welcome suitable conversations about AI-assisted video editing,
+            cartoon content, and creative collaborations. Please contact me
+            through one of the social profiles above.
+          </p>
+
+          <p style="margin-top: 18px;">
+            <a class="btn primary"
+               href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Connect on LinkedIn ↗
+            </a>
+          </p>
+
+          <p class="note" style="margin-top: 18px;">
+            For professional inquiries, please use the social links above.
+            Replace the LinkedIn link with your own profile when available.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © Mahbub AI Creation · AI Video Editing &amp; 2D/3D Cartoon Creation
+      <br>
+      Portfolio showcasing AI-assisted creative projects and social channels.
+    </footer>
 
   </div>
-</section>
-<section id="contact">
-  <h2>Remote &amp; Freelance Opportunities</h2>
-
-  <div class="card">
-    <p>
-      I welcome suitable conversations about AI-assisted video editing,
-      cartoon content, and creative collaborations. Please contact me
-      through one of the social profiles above.
-    </p>
-
-    <p style="margin-top:14px">
-      <a class="btn primary"
-         href="https://www.linkedin.com/"
-         target="_blank" rel="noopener noreferrer">
-        Connect on LinkedIn ↗
-      </a>
-    </p>
-
-    <p class="note" style="margin-top:18px">
-      For professional inquiries, please use the social links above.
-      Replace the LinkedIn link with your own profile when available.
-    </p>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  © Mahbub AI Creation · AI Video Editing &amp; 2D/3D Cartoon Creation
-  <br>
-  Portfolio showcasing AI-assisted creative projects and social channels.
-</footer>
-
-</div>
 </body>
 </html>
