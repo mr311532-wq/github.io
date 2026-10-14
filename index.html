@@ -3,53 +3,482 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Mahbub AI Creation — AI-assisted video editing and 2D/3D cartoon creation portfolio.">
+<meta name="theme-color" content="#081225">
+<meta name="description" content="Mahbub AI Creation — AI-assisted video editing, cartoon storytelling, and creative projects.">
+
 <title>Mahbub AI Creation | AI Video Editor & Cartoon Creator</title>
+
 <style>
-:root{--bg:#081225;--panel:#111d35;--text:#f4f7ff;--muted:#b8c4dc;--blue:#70a5ff;--violet:#c2a3ff;--line:#263754}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#1e2d60 0,transparent 32rem),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1080px,92%);margin:auto}
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.brand{font-weight:800;letter-spacing:.04em}.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem}
-.hero{padding:76px 0 58px;display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:center}
-.kicker{color:var(--violet);font-size:.82rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.03;letter-spacing:-.04em;margin:14px 0 20px}
-h1 span{color:var(--blue)}.lead{color:var(--muted);font-size:1.15rem;max-width:680px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid #42639a;font-weight:700}.primary{background:linear-gradient(110deg,#4f8cff,#9670ff);border:0;color:#081225}
-.visual{min-height:280px;border:1px solid #344a78;border-radius:28px;background:linear-gradient(145deg,#172e58,#291e4b 65%,#101a30);padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 60px #0005}
-.visual .symbol{font-size:4rem}.visual strong{font-size:1.45rem;line-height:1.2}.visual p{color:var(--muted);margin-bottom:0}
-section{padding:34px 0 48px}h2{font-size:1.8rem;letter-spacing:-.02em;margin:0 0 8px}.intro{color:var(--muted);margin:0 0 22px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#111d35,#0d172a)}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0}
-.pill{display:inline-block;font-size:.82rem;color:#d9e5ff;border:1px solid #344b77;border-radius:999px;padding:5px 10px;margin:5px 5px 0 0}
-.links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.linkcard{display:block;padding:17px;border:1px solid var(--line);border-radius:14px;background:#101b30}.linkcard strong{display:block;color:var(--text)}.linkcard small{display:block;color:var(--muted);overflow-wrap:anywhere}
-.note{border-left:3px solid var(--violet);padding:12px 16px;color:var(--muted);background:#111a2e;border-radius:0 12px 12px 0}
-footer{border-top:1px solid var(--line);padding:25px 0 40px;color:var(--muted);font-size:.92rem}
-@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:48px}.visual{min-height:220px}.grid,.links{grid-template-columns:1fr}.navlinks{gap:12px}}
+:root {
+  --bg: #081225;
+  --panel: #111d35;
+  --text: #f4f7ff;
+  --muted: #b8c4dc;
+  --blue: #70a5ff;
+  --violet: #c2a3ff;
+  --line: #263754;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 80% 0%, #1e2d60 0, transparent 32rem),
+    var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1080px, 92%);
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.navlinks {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: .94rem;
+}
+
+.hero {
+  padding: 76px 0 58px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.kicker {
+  color: var(--violet);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 1.03;
+  letter-spacing: -.04em;
+  margin: 14px 0 20px;
+}
+
+h1 span {
+  color: var(--blue);
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 680px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #42639a;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.primary {
+  background: linear-gradient(110deg, #4f8cff, #9670ff);
+  border: 0;
+  color: #081225;
+}
+
+.visual {
+  min-height: 280px;
+  border: 1px solid #344a78;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #172e58, #291e4b 65%, #101a30);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 60px #0005;
+}
+
+.visual .symbol {
+  font-size: 4rem;
+}
+
+.visual strong {
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.visual p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+section {
+  padding: 34px 0 48px;
+  scroll-margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+
+.intro {
+  color: var(--muted);
+  margin: 0 0 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #111d35, #0d172a);
+  transition: border-color .2s, transform .2s;
+}
+
+.card:hover {
+  border-color: #5275ad;
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.pill {
+  display: inline-block;
+  font-size: .82rem;
+  color: #d9e5ff;
+  border: 1px solid #344b77;
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.linkcard {
+  display: block;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #101b30;
+  transition: border-color .2s, transform .2s;
+}
+
+.linkcard:hover {
+  border-color: var(--blue);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.linkcard strong {
+  display: block;
+  color: var(--text);
+}
+
+.linkcard small {
+  display: block;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 16px;
+  background: #000;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.note {
+  border-left: 3px solid var(--violet);
+  padding: 12px 16px;
+  color: var(--muted);
+  background: #111a2e;
+  border-radius: 0 12px 12px 0;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 25px 0 40px;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+  }
+
+  .visual {
+    min-height: 220px;
+  }
+
+  .grid,
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    align-items: flex-start;
+  }
+
+  .navlinks {
+    gap: 10px 14px;
+  }
+
+  .navlinks a {
+    font-size: .9rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 11vw, 3.6rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
 </style>
 </head>
+
 <body>
 <div class="wrap">
-<nav><a class="brand" href="#top">MAHBUB AI CREATION</a><div class="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#work">My Links</a><a href="#contact">Contact</a></div></nav>
+
+<nav>
+  <a class="brand" href="#top">MAHBUB AI CREATION</a>
+
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">My Links</a>
+    <a href="#featured">Featured Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <main id="top">
+
 <div class="hero">
-<div><div class="kicker">Creative visual storytelling</div><h1>AI Video Editor <span>&amp;</span> Cartoon Creator</h1><p class="lead">I create AI-assisted video content and explore 2D and 3D cartoon storytelling for YouTube and digital platforms.</p><div class="actions"><a class="btn primary" href="#work">Explore My Channels</a><a class="btn" href="#contact">Connect With Me</a></div></div>
-<div class="visual"><div class="symbol" aria-hidden="true">▶ ✦ 🎬</div><div><strong>Ideas into visual stories.</strong><p>AI Video Editing · 2D Cartoon · 3D Cartoon</p></div></div>
+  <div>
+    <div class="kicker">Creative Visual Storytelling</div>
+    <h1>AI Video Editor <span>&amp;</span> Cartoon Creator</h1>
+
+    <p class="lead">
+      I create AI-assisted video content and explore 2D and 3D cartoon
+      storytelling for YouTube and digital platforms.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#work">Explore My Channels</a>
+      <a class="btn" href="#contact">Connect With Me</a>
+    </div>
+  </div>
+
+  <div class="visual">
+    <div class="symbol" aria-hidden="true">▶ ✦ 🎬</div>
+    <div>
+      <strong>Ideas into visual stories.</strong>
+      <p>AI Video Editing · 2D Cartoon · 3D Cartoon</p>
+    </div>
+  </div>
 </div>
-<section id="about"><h2>About Me</h2><p class="intro">A creative portfolio for AI-assisted video editing and cartoon content creation.</p><div class="card"><p>I enjoy turning ideas into engaging visual content using AI-assisted creative tools, scene generation, character concepts, and video editing. I am interested in suitable remote opportunities, freelance projects, and creative collaborations. Please explore the links below to review my published channels and social profiles.</p></div></section>
-<section id="services"><h2>Services &amp; Skills</h2><p class="intro">Areas I work on or am developing in my creative workflow.</p><div class="grid">
-<div class="card"><h3>🎬 AI Video Editing</h3><p>Editing and assembling AI-assisted video content for digital platforms.</p><span class="pill">Video Editing</span><span class="pill">Short-form Content</span></div>
-<div class="card"><h3>🎨 2D Cartoon Creation</h3><p>Cartoon-style visuals and story-driven scenes for animated content.</p><span class="pill">2D Cartoon</span><span class="pill">Visual Storytelling</span></div>
-<div class="card"><h3>🧊 3D Cartoon Creation</h3><p>3D cartoon concepts and animated-story content using creative tools.</p><span class="pill">3D Cartoon</span><span class="pill">Animation Concepts</span></div>
-<div class="card"><h3>🖼️ Character &amp; Scene Design</h3><p>Developing character visuals and scene concepts to support a story.</p><span class="pill">Character Design</span><span class="pill">Scene Generation</span></div>
-</div></section>
-<section id="work"><h2>Channels &amp; Social Profiles</h2><p class="intro">Open the links to review my channels and creative presence. Individual video samples can be added here as they are selected.</p><div class="links">
-<a class="linkcard" href="https://www.youtube.com/@DetectiveAyan26" target="_blank" rel="noopener noreferrer"><strong>Detective Ayan</strong><small>YouTube channel ↗</small></a>
-<a class="linkcard" href="https://www.youtube.com/@AnnafiBraveheartBoy26" target="_blank" rel="noopener noreferrer"><strong>Annafi Braveheart Boy</strong><small>YouTube channel ↗</small></a>
-<a class="linkcard" href="https://www.facebook.com/0MahBubuR0" target="_blank" rel="noopener noreferrer"><strong>Facebook</strong><small>Profile / page ↗</small></a>
-<a class="linkcard" href="https://x.com/mahbubur_m99646" target="_blank" rel="noopener noreferrer"><strong>X</strong><small>@mahbubur_m99646 ↗</small></a>
-<a class="linkcard" href="https://www.instagram.com/mr3115322026/" target="_blank" rel="noopener noreferrer"><strong>Instagram</strong><small>@mr3115322026 ↗</small></a>
-</div><p class="note" style="margin-top:18px">Portfolio note: Channel and social links are provided as supplied. Please add direct links to 2–3 specific videos you want recruiters to see first.</p></section>
-<section id="contact"><h2>Remote &amp; Freelance Opportunities</h2><div class="card"><p>I welcome suitable conversations about AI-assisted video editing, cartoon content, and creative collaborations. Please contact me through one of the social profiles above.</p><p style="margin-top:14px"><a class="btn primary" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></p></div></section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p class="intro">
+    A creative portfolio for AI-assisted video editing and cartoon content creation.
+  </p>
+
+  <div class="card">
+    <p>
+      I enjoy turning ideas into engaging visual content using AI-assisted
+      creative tools, scene generation, character concepts, and video editing.
+      I am interested in suitable remote opportunities, freelance projects,
+      and creative collaborations. Explore my channels and social profiles
+      to see my creative work.
+    </p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services &amp; Skills</h2>
+  <p class="intro">
+    Areas I work on or am developing in my creative workflow.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🎬 AI Video Editing</h3>
+      <p>Editing and assembling AI-assisted video content for digital platforms.</p>
+      <span class="pill">Video Editing</span>
+      <span class="pill">Short-form Content</span>
+    </div>
+
+    <div class="card">
+      <h3>🎨 2D Cartoon Creation</h3>
+      <p>Cartoon-style visuals and story-driven scenes for animated content.</p>
+      <span class="pill">2D Cartoon</span>
+      <span class="pill">Visual Storytelling</span>
+    </div>
+
+    <div class="card">
+      <h3>🧊 3D Cartoon Creation</h3>
+      <p>3D cartoon concepts and animated-story content using creative tools.</p>
+      <span class="pill">3D Cartoon</span>
+      <span class="pill">Animation Concepts</span>
+    </div>
+
+    <div class="card">
+      <h3>🖼️ Character &amp; Scene Design</h3>
+      <p>Developing character visuals and scene concepts to support a story.</p>
+      <span class="pill">Character Design</span>
+      <span class="pill">Scene Generation</span>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Channels &amp; Social Profiles</h2>
+  <p class="intro">
+    Explore my YouTube channels and social profiles.
+  </p>
+
+  <div class="links">
+    <a class="linkcard"
+       href="https://www.youtube.com/@DetectiveAyan26"
+       target="_blank" rel="noopener noreferrer">
+      <strong>Detective Ayan</strong>
+      <small>YouTube channel ↗</small>
+    </a>
+
+    <a class="linkcard"
+       href="https://www.youtube.com/@AnnafiBraveheartBoy26"
+       target="_blank" rel="noopener noreferrer">
+      <strong>Annafi Braveheart Boy</strong>
+      <small>YouTube channel ↗</small>
+    </a>
+
+    <a class="linkcard"
+       href="https://www.facebook.com/0MahBubuR0"
+       target="_blank" rel="noopener noreferrer">
+      <strong>Facebook</strong>
+      <small>Profile / page ↗</small>
+    </a>
+
+    <a class="linkcard"
+       href="https://x.com/mahbubur_m99646"
+       target="_blank" rel="noopener noreferrer">
+      <strong>X</strong>
+      <small>@mahbubur_m99646 ↗</small>
+    </a>
+
+    <a class="linkcard"
+       href="https://www.instagram.com/mr3115322026/"
+       target="_blank" rel="noopener noreferrer">
+      <strong>Instagram</strong>
+      <small>@mr3115322026 ↗</small>
+    </a>
+  </div>
+</section>
+
 <section id="featured">
   <h2>Featured Projects</h2>
   <p class="intro">
@@ -64,29 +493,28 @@ footer{border-top:1px solid var(--line);padding:25px 0 40px;color:var(--muted);f
       <a href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
          target="_blank" rel="noopener noreferrer">
         <img
+          class="project-image"
           src="https://img.youtube.com/vi/cxDaNDc3ehY/hqdefault.jpg"
-          alt="Annafi cartoon adventure video thumbnail"
-          loading="lazy"
-          style="width:100%;border-radius:12px;display:block;margin:12px 0;"
-        >
+          alt="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান ভিডিও থাম্বনেইল"
+          loading="lazy">
       </a>
 
-      <a class="btn"
+      <a class="btn primary"
          href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
          target="_blank" rel="noopener noreferrer">
         ▶ Watch on YouTube
       </a>
 
-      <h3>Watch the Video Here</h3>
-      <div style="position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:12px;margin-top:12px;">
+      <h3 style="margin-top:22px">Watch the Video Here</h3>
+
+      <div class="video-frame">
         <iframe
           src="https://www.youtube.com/embed/cxDaNDc3ehY"
-          title="Annafi cartoon adventure"
+          title="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
           loading="lazy"
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          style="position:absolute;inset:0;width:100%;height:100%;border:0;">
+          allowfullscreen>
         </iframe>
       </div>
     </div>
@@ -94,14 +522,49 @@ footer{border-top:1px solid var(--line);padding:25px 0 40px;color:var(--muted);f
     <div class="card">
       <h3>Detective Ayan</h3>
       <p>Cartoon storytelling and creative animation projects.</p>
-      <a href="https://www.youtube.com/@DetectiveAyan26"
+
+      <a class="btn"
+         href="https://www.youtube.com/@DetectiveAyan26"
          target="_blank" rel="noopener noreferrer">
-        Explore Detective Ayan
+        Explore Detective Ayan ↗
       </a>
     </div>
   </div>
-</section></main>
-<footer>© Mahbub AI Creation · AI Video Editing &amp; 2D/3D Cartoon Creation<br>Portfolio content is based on the information and links provided. No unverified client results or experience claims are made.</footer>
-</div>
-</body></html>
+</section>
 
+<section id="contact">
+  <h2>Remote &amp; Freelance Opportunities</h2>
+
+  <div class="card">
+    <p>
+      I welcome suitable conversations about AI-assisted video editing,
+      cartoon content, and creative collaborations. Please contact me
+      through one of the social profiles above.
+    </p>
+
+    <p style="margin-top:14px">
+      <a class="btn primary"
+         href="https://www.linkedin.com/"
+         target="_blank" rel="noopener noreferrer">
+        Connect on LinkedIn ↗
+      </a>
+    </p>
+
+    <p class="note" style="margin-top:18px">
+      For professional inquiries, please use the social links above.
+      Replace the LinkedIn link with your own profile when available.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © Mahbub AI Creation · AI Video Editing &amp; 2D/3D Cartoon Creation
+  <br>
+  Portfolio showcasing AI-assisted creative projects and social channels.
+</footer>
+
+</div>
+</body>
+</html>
