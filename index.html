@@ -336,6 +336,59 @@ footer {
     transition: none !important;
   }
 }
+  /* AI CYBER DESIGN */
+:root {
+  --bg: #070b18;
+  --text: #edf4ff;
+  --blue: #00e5ff;
+  --violet: #a855f7;
+  --line: #263754;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, #18214a, transparent 55%),
+    var(--bg);
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  color: var(--blue);
+  text-shadow: 0 0 14px #00e5ff55;
+}
+
+.visual, .card, .linkcard, .note {
+  border-color: #00e5ff55;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.visual:hover, .card:hover, .linkcard:hover {
+  transform: translateY(-5px);
+  border-color: var(--violet);
+  box-shadow: 0 0 24px #a855f744;
+}
+
+.primary {
+  background: linear-gradient(110deg, #00e5ff, #a855f7);
+  color: #070b18;
+}
+
+@keyframes cyberGlow {
+  0%, 100% { text-shadow: 0 0 10px #00e5ff55; }
+  50% { text-shadow: 0 0 24px #00e5ffbb, 0 0 36px #a855f755; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 {
+    animation: cyberGlow 3s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid, .links {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
