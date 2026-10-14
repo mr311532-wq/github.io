@@ -389,6 +389,200 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
+  /* ===== MAHBUB AI CYBER COMPLETE DESIGN ===== */
+
+/* 1. HERO SECTION GLOW */
+.hero {
+  position: relative;
+}
+
+.hero h1 {
+  color: #edf4ff;
+  text-shadow: 0 0 16px #00e5ff55;
+}
+
+.hero h1 span {
+  color: #00e5ff;
+}
+
+.kicker {
+  color: #c084fc;
+}
+
+.visual {
+  position: relative;
+  overflow: hidden;
+  border-color: #00e5ff88;
+  background: linear-gradient(135deg, #10182b, #211344, #0b2338);
+  box-shadow: 0 0 28px #00e5ff18;
+}
+
+.visual .symbol {
+  color: #00e5ff;
+  text-shadow: 0 0 24px #00e5ff88;
+}
+
+@keyframes mahbubGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #00e5ff55;
+  }
+  50% {
+    text-shadow: 0 0 25px #00e5ffbb, 0 0 38px #a855f766;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 {
+    animation: mahbubGlow 3s ease-in-out infinite;
+  }
+
+  .visual {
+    animation: mahbubFloat 5s ease-in-out infinite;
+  }
+}
+
+@keyframes mahbubFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* 2. SOCIAL MEDIA BUTTONS */
+.linkcard {
+  background: linear-gradient(135deg, #10182b, #171333);
+  border: 1px solid #00e5ff44;
+  border-radius: 16px;
+  padding: 19px;
+  box-shadow: 0 5px 22px #0003;
+  overflow-wrap: anywhere;
+}
+
+.linkcard strong {
+  color: #00e5ff;
+  margin-bottom: 5px;
+}
+
+.linkcard small {
+  color: #b8c4dc;
+}
+
+.linkcard:hover {
+  border-color: #a855f7;
+  box-shadow: 0 0 22px #a855f744;
+  text-decoration: none;
+}
+
+/* 3. FEATURED PROJECTS */
+#featured .card {
+  background: linear-gradient(145deg, #111d35, #17112e);
+  border: 1px solid #00e5ff44;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.project-image {
+  border: 1px solid #a855f744;
+  transition: transform .3s ease, filter .3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+}
+
+.video-frame {
+  border: 1px solid #00e5ff66;
+  box-shadow: 0 0 22px #00e5ff22;
+}
+
+/* 4. BUTTONS */
+.btn {
+  border-radius: 12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(110deg, #00e5ff, #a855f7);
+  color: #070b18;
+  box-shadow: 0 0 16px #00e5ff33;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #a855f755;
+}
+
+/* 5. ALL CARDS */
+.card {
+  background: linear-gradient(145deg, #111d35, #101126);
+  border-color: #00e5ff33;
+  border-radius: 18px;
+}
+
+.card:hover {
+  border-color: #a855f7;
+  box-shadow: 0 0 22px #a855f733;
+}
+
+/* 6. HEADINGS AND CONTACT */
+h2 {
+  color: #00e5ff;
+}
+
+.note {
+  border-left-color: #a855f7;
+  background: #11182b;
+}
+
+footer {
+  border-top-color: #00e5ff33;
+}
+
+/* 7. MOBILE RESPONSIVE */
+@media (max-width: 720px) {
+  .wrap {
+    width: 92%;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .navlinks {
+    gap: 10px;
+  }
+
+  .hero {
+    gap: 22px;
+    padding-top: 42px;
+  }
+
+  .hero h1 {
+    overflow-wrap: anywhere;
+  }
+
+  .grid, .links {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .visual {
+    min-height: 230px;
+  }
+
+  .video-frame {
+    width: 100%;
+  }
+
+  .actions .btn {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 </style>
 </head>
 
