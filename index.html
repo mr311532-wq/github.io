@@ -154,6 +154,261 @@
     transform: none;
   }
 }
+ /* ===== MAHBUB AI CREATION: PROJECT GALLERY ===== */
+
+.featured-gallery {
+  padding: 70px 0;
+  scroll-margin-top: 90px;
+}
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.gallery-kicker {
+  display: inline-block;
+  color: #00e5ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.gallery-heading h2 {
+  font-size: clamp(30px, 5vw, 46px);
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.gallery-heading h2 span {
+  color: #00e5ff;
+  text-shadow: 0 0 18px #00e5ff55;
+}
+
+.gallery-heading .intro {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  align-items: start;
+}
+
+.project-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #00e5ff40;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #111d35, #17112e);
+  box-shadow: 0 8px 28px #00000022;
+  transition: transform .3s ease, border-color .3s ease,
+              box-shadow .3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #00e5ff;
+  box-shadow: 0 12px 35px #00e5ff1c;
+}
+
+.project-thumbnail {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0b1024;
+  text-decoration: none;
+}
+
+.project-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.project-card:hover .project-thumbnail img {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 42px;
+  text-shadow: 0 0 20px #00e5ff;
+  background: #080d1c35;
+  transition: background .3s ease;
+}
+
+.project-thumbnail:hover .play-overlay {
+  background: #080d1c65;
+}
+
+.thumbnail-label {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 7px 11px;
+  border: 1px solid #00e5ff70;
+  border-radius: 20px;
+  background: #081225df;
+  color: #00e5ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.project-content {
+  padding: 22px;
+}
+
+.project-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #c084fc;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.project-content h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.project-content p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+  margin: 8px 0 12px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.video-section {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #00e5ff30;
+}
+
+.video-section h4 {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.video-section h4 span {
+  color: #00e5ff;
+  margin-right: 7px;
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid #00e5ff55;
+  border-radius: 12px;
+  background: #050816;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.channel-art {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #00e5ff;
+  background:
+    radial-gradient(circle at 50% 20%, #492a78, transparent 55%),
+    linear-gradient(145deg, #101a32, #080d1c);
+}
+
+.detective-icon {
+  font-size: 56px;
+  filter: drop-shadow(0 0 12px #00e5ff66);
+}
+
+.channel-title {
+  font-size: clamp(15px, 2vw, 22px);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.channel-subtitle {
+  color: #c084fc;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 760px) {
+  .featured-gallery {
+    padding: 48px 0;
+  }
+
+  .project-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 28px;
+  }
+
+  .project-content {
+    padding: 18px;
+  }
+
+  .project-content h3 {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-thumbnail img,
+  .play-overlay {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .project-card:hover .project-thumbnail img {
+    transform: none;
+  }
+}
 <style>
 :root {
   --bg: #081225;
@@ -877,81 +1132,107 @@ footer {
     </a>
   </div>
 </section>
-
 <section id="featured" class="featured-gallery">
-  <h2>Featured Projects</h2>
+  <div class="gallery-heading">
+    <span class="gallery-kicker">MY CREATIVE PORTFOLIO</span>
+    <h2>Featured <span>Projects</span></h2>
+    <p class="intro">
+      Explore my AI cartoon stories, cinematic animation
+      and creative video projects.
+    </p>
+  </div>
 
-  <p class="intro">
-    Explore my AI cartoon stories, animation and video editing projects.
-  </p>
-
-  <div class="grid">
+  <div class="project-grid">
 
     <!-- Project 1: Annafi Cartoon Story -->
-    <article class="card project-card">
-      <a
-        class="project-thumbnail"
-        href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Watch Annafi cartoon story on YouTube"
-      >
+    <article class="project-card">
+
+      <a class="project-thumbnail"
+         href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Watch Annafi cartoon story on YouTube">
+
         <img
-          class="project-image"
           src="https://img.youtube.com/vi/cxDaNDc3ehY/hqdefault.jpg"
           alt="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
-          loading="lazy"
-        >
-        <span class="play-overlay" aria-hidden="true">▶</span>
+          loading="lazy">
+
+        <span class="play-overlay" aria-hidden="true">
+          ▶
+        </span>
+
+        <span class="thumbnail-label">FEATURED VIDEO</span>
       </a>
 
       <div class="project-content">
-        <span class="pill">AI Cartoon Story</span>
+        <span class="project-tag">AI CARTOON STORY</span>
 
-        <h3>
-          বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান
-        </h3>
+        <h3>বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান</h3>
 
         <p>
-          An exciting AI-assisted cartoon storytelling
-          and animation project.
+          An exciting AI-assisted cartoon adventure with
+          cinematic storytelling and animation.
         </p>
 
-        <a
-          class="btn primary project-button"
-          href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="btn primary project-button"
+           href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
+           target="_blank"
+           rel="noopener noreferrer">
           ▶ Watch on YouTube
         </a>
+
+        <div class="video-section">
+          <h4><span>▶</span> Watch Video Here</h4>
+
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/cxDaNDc3ehY"
+              title="বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </div>
     </article>
 
-    <!-- Project 2: Detective Ayan Channel -->
-    <article class="card project-card channel-card">
-      <div class="channel-art" aria-hidden="true">
-        <span>🕵️</span>
-        <span>DETECTIVE AYAN</span>
-        <span>AI CARTOON STORIES</span>
-      </div>
+    <!-- Project 2: Detective Ayan -->
+    <article class="project-card">
+
+      <a class="project-thumbnail channel-thumbnail"
+         href="https://www.youtube.com/@DetectiveAyan26"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Explore Detective Ayan YouTube channel">
+
+        <div class="channel-art">
+          <span class="detective-icon" aria-hidden="true">🕵️</span>
+          <span class="channel-title">DETECTIVE AYAN</span>
+          <span class="channel-subtitle">AI CARTOON STORIES</span>
+        </div>
+
+        <span class="play-overlay" aria-hidden="true">
+          ▶
+        </span>
+      </a>
 
       <div class="project-content">
-        <span class="pill">Cartoon &amp; Animation</span>
+        <span class="project-tag">CARTOON &amp; ANIMATION</span>
 
         <h3>Detective Ayan</h3>
 
         <p>
-          Discover detective adventures, cartoon storytelling
-          and creative animation on my YouTube channel.
+          Discover detective adventures, imaginative cartoon
+          stories and creative animation projects.
         </p>
 
-        <a
-          class="btn primary project-button"
-          href="https://www.youtube.com/@DetectiveAyan26"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="btn primary project-button"
+           href="https://www.youtube.com/@DetectiveAyan26"
+           target="_blank"
+           rel="noopener noreferrer">
           Explore Detective Ayan ↗
         </a>
       </div>
@@ -959,7 +1240,6 @@ footer {
 
   </div>
 </section>
-
 <section id="contact">
   <h2>Remote &amp; Freelance Opportunities</h2>
 
