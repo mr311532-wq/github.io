@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mahbub AI Creation | AI-Assisted Cartoon & Character Creator</title>
-  <meta name="description" content="AI-assisted cartoon creation, character concepts, visual storytelling and video projects by Mahbub AI Creation.">
+  <title>Mahbub AI Creation | AI Video Editor & Cartoon Creator</title>
+  <meta name="description" content="AI-assisted cartoon creation, character concepts, video editing, visual storytelling and cinematic projects by Mahbub AI Creation.">
   <meta name="theme-color" content="#0b1020">
 
   <style>
@@ -130,7 +129,8 @@
       margin-bottom: 22px;
     }
 
-    h1 span {
+    h1 span,
+    .section-heading h2 span {
       color: var(--cyan);
     }
 
@@ -140,11 +140,12 @@
       max-width: 680px;
     }
 
-    .actions {
+    .actions,
+    .social-links {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 22px;
     }
 
     .btn {
@@ -185,6 +186,7 @@
 
     .hero-art .symbol {
       font-size: clamp(5rem, 12vw, 8rem);
+      text-align: center;
       filter: drop-shadow(0 12px 30px rgba(84,229,226,.2));
     }
 
@@ -203,12 +205,7 @@
       margin-bottom: 10px;
     }
 
-    .section-heading h2 span {
-      color: var(--cyan);
-    }
-
     .about-grid,
-    .skills-grid,
     .project-grid,
     .channel-grid {
       display: grid;
@@ -217,7 +214,6 @@
     }
 
     .panel,
-    .skill-card,
     .project-card,
     .channel-card {
       background: var(--surface);
@@ -231,7 +227,6 @@
     }
 
     .panel h3,
-    .skill-card h3,
     .project-card h3,
     .channel-card h3 {
       margin-bottom: 10px;
@@ -239,7 +234,6 @@
     }
 
     .panel p,
-    .skill-card p,
     .project-card p,
     .channel-card p {
       color: var(--muted);
@@ -322,7 +316,7 @@
       margin-top: 15px;
     }
 
-    .project-body .project-note {
+    .project-note {
       font-size: .8rem;
       margin-top: 10px;
       color: #d5b8ff;
@@ -351,13 +345,6 @@
         var(--surface);
     }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
     footer {
       padding: 25px 0;
       border-top: 1px solid var(--border);
@@ -380,7 +367,6 @@
       }
 
       .about-grid,
-      .skills-grid,
       .project-grid,
       .channel-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -403,7 +389,6 @@
       }
 
       .about-grid,
-      .skills-grid,
       .project-grid,
       .channel-grid {
         grid-template-columns: 1fr;
@@ -447,6 +432,7 @@
 
 <main>
 
+  <!-- HERO SECTION -->
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div>
@@ -465,10 +451,22 @@
         </p>
 
         <div class="actions">
-          <a class="btn btn-primary" href="#portfolio">Explore My Projects</a>
+          <a class="btn btn-primary" href="#portfolio">
+            Explore My Projects
+          </a>
+
+          <!-- NEW YOUTUBE CHANNEL -->
+          <a class="btn btn-secondary"
+             href="https://www.youtube.com/@MahbubAICreation"
+             target="_blank" rel="noopener noreferrer">
+            Visit My New YouTube Channel ↗
+          </a>
+
           <a class="btn btn-secondary"
              href="https://www.youtube.com/@DetectiveAyan26"
-             target="_blank" rel="noopener noreferrer">Watch My Videos</a>
+             target="_blank" rel="noopener noreferrer">
+            Watch Detective Ayan ↗
+          </a>
         </div>
       </div>
 
@@ -481,6 +479,7 @@
     </div>
   </section>
 
+  <!-- ABOUT SECTION -->
   <section id="about">
     <div class="container">
       <div class="section-heading">
@@ -516,385 +515,4 @@
           <div class="icon" aria-hidden="true">🔄</div>
           <h3>Creative Iteration</h3>
           <p>
-            Refining visual concepts and exploring alternatives while
-            working to maintain character identity across scenes.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Tools &amp; Workflow</div>
-        <h2>Software I <span>use</span></h2>
-        <p class="section-intro">
-          These are the tools I use in my creative workflow. This list
-          identifies software used; it does not imply expert-level
-          proficiency in every application.
-        </p>
-      </div>
-
-      <div class="software-list">
-        <span class="software-tag">AI Tools</span>
-        <span class="software-tag">Adobe Photoshop</span>
-        <span class="software-tag">Adobe Illustrator</span>
-        <span class="software-tag">Adobe Premiere Pro</span>
-      </div>
-
-      <p class="software-note">
-        Creative focus: AI-assisted image creation, cartoon concepts,
-        visual editing and video storytelling.
-      </p>
-    </div>
-  </section>
-
-  <section id="portfolio">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Selected Work &amp; Studies</div>
-        <h2>Creative <span>Portfolio</span></h2>
-        <p class="section-intro">
-          Explore a published video project and visual study examples.
-          The illustrated study cards below are newly created concept
-          visuals for this website, not evidence of previously completed
-          client work.
-        </p>
-      </div>
-
-      <div class="project-grid">
-
-        <!-- Published video project -->
-        <article class="project-card">
-          <a class="project-art"
-             href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Watch the published Bengali adventure video">
-            <img
-              class="video-thumb"
-              src="https://img.youtube.com/vi/cxDaNDc3ehY/hqdefault.jpg"
-              alt="Thumbnail of the Bengali adventure video"
-              loading="lazy">
-          </a>
-
-          <div class="project-body">
-            <span class="tag">Published Video</span>
-            <h3>বিমান হাইজ্যাক — সাহসী আন্নাফির রোমাঞ্চকর অভিযান</h3>
-            <p>
-              A Bengali adventure video project featuring story-driven
-              visual content.
-            </p>
-            <a class="text-link"
-               href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-               target="_blank" rel="noopener noreferrer">
-              Watch project ↗
-            </a>
-          </div>
-        </article>
-
-        <!-- New concept visual: Expression Studies -->
-        <article class="project-card">
-          <div class="project-art">
-            <svg viewBox="0 0 480 300" role="img"
-                 aria-label="Illustrated character expression concept study">
-              <defs>
-                <linearGradient id="expressionBg" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#193e5c"/>
-                  <stop offset="1" stop-color="#38245c"/>
-                </linearGradient>
-              </defs>
-              <rect width="480" height="300" fill="url(#expressionBg)"/>
-              <circle cx="240" cy="135" r="91" fill="#f6c59c"/>
-              <path d="M150 125 Q135 32 240 35 Q340 35 332 126
-                       L310 90 Q255 64 178 96 Z" fill="#25253c"/>
-              <path d="M184 130 Q201 111 219 130" fill="none"
-                    stroke="#33243a" stroke-width="8" stroke-linecap="round"/>
-              <path d="M261 130 Q279 111 296 130" fill="none"
-                    stroke="#33243a" stroke-width="8" stroke-linecap="round"/>
-              <circle cx="204" cy="145" r="7" fill="#26213b"/>
-              <circle cx="280" cy="145" r="7" fill="#26213b"/>
-              <path d="M213 183 Q241 210 273 181" fill="none"
-                    stroke="#9e4353" stroke-width="7" stroke-linecap="round"/>
-              <path d="M145 300 Q152 222 240 220 Q328 222 337 300"
-                    fill="#54e5e2"/>
-              <circle cx="100" cy="70" r="20" fill="#a99bff" opacity=".65"/>
-              <circle cx="390" cy="210" r="30" fill="#54e5e2" opacity=".25"/>
-              <text x="24" y="274" fill="#fff" font-size="15"
-                    font-family="Arial">EXPRESSION CONCEPT</text>
-            </svg>
-          </div>
-
-          <div class="project-body">
-            <span class="tag">Expression Studies</span>
-            <h3>Facial Expression Concepts</h3>
-            <p>
-              An illustrative concept for exploring facial expression,
-              mood and readable character features.
-            </p>
-            <p class="project-note">
-              Website concept artwork — replace with your own finished study
-              when available.
-            </p>
-          </div>
-        </article>
-
-        <!-- New concept visual: Character Style Variations -->
-        <article class="project-card">
-          <div class="project-art">
-            <svg viewBox="0 0 480 300" role="img"
-                 aria-label="Three stylized character design variations">
-              <defs>
-                <linearGradient id="styleBg" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#29244c"/>
-                  <stop offset="1" stop-color="#154452"/>
-                </linearGradient>
-              </defs>
-              <rect width="480" height="300" fill="url(#styleBg)"/>
-
-              <g transform="translate(28 45)">
-                <circle cx="65" cy="62" r="42" fill="#f4c29a"/>
-                <path d="M24 59 Q20 12 67 16 Q108 17 106 58
-                         L90 40 L41 43 Z" fill="#24243b"/>
-                <circle cx="51" cy="65" r="4" fill="#222"/>
-                <circle cx="79" cy="65" r="4" fill="#222"/>
-                <path d="M52 82 Q65 91 79 81" fill="none"
-                      stroke="#9b4c54" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13 175 Q17 115 65 115 Q113 115 117 175"
-                      fill="#54e5e2"/>
-              </g>
-
-              <g transform="translate(169 45)">
-                <circle cx="65" cy="62" r="42" fill="#bd805e"/>
-                <path d="M23 55 Q29 12 68 17 Q109 20 106 62
-                         L96 45 L38 42 Z" fill="#171c30"/>
-                <circle cx="51" cy="65" r="4" fill="#222"/>
-                <circle cx="79" cy="65" r="4" fill="#222"/>
-                <path d="M51 83 Q65 77 79 83" fill="none"
-                      stroke="#703a42" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13 175 Q17 115 65 115 Q113 115 117 175"
-                      fill="#a99bff"/>
-              </g>
-
-              <g transform="translate(310 45)">
-                <circle cx="65" cy="62" r="42" fill="#f1d0a8"/>
-                <path d="M23 55 Q27 12 66 17 Q107 18 106 61
-                         L94 39 L40 42 Z" fill="#6c4034"/>
-                <circle cx="51" cy="65" r="4" fill="#222"/>
-                <circle cx="79" cy="65" r="4" fill="#222"/>
-                <path d="M51 81 Q65 94 79 81" fill="none"
-                      stroke="#9b4c54" stroke-width="4" stroke-linecap="round"/>
-                <path d="M13 175 Q17 115 65 115 Q113 115 117 175"
-                      fill="#f0a65b"/>
-              </g>
-
-              <text x="24" y="274" fill="#fff" font-size="15"
-                    font-family="Arial">CHARACTER STYLE CONCEPTS</text>
-            </svg>
-          </div>
-
-          <div class="project-body">
-            <span class="tag">Character Style Variations</span>
-            <h3>Character Design Exploration</h3>
-            <p>
-              A concept sheet showing how colors, hair and clothing
-              can be varied across character designs.
-            </p>
-            <p class="project-note">
-              Website concept artwork — replace with your own finished study
-              when available.
-            </p>
-          </div>
-        </article>
-
-        <!-- New concept visual: Story Worlds -->
-        <article class="project-card">
-          <div class="project-art">
-            <svg viewBox="0 0 480 300" role="img"
-                 aria-label="Stylized fantasy island and story world concept">
-              <defs>
-                <linearGradient id="worldSky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#192d5c"/>
-                  <stop offset="1" stop-color="#8b5eaa"/>
-                </linearGradient>
-              </defs>
-              <rect width="480" height="300" fill="url(#worldSky)"/>
-              <circle cx="370" cy="65" r="32" fill="#ffe6a8"/>
-              <circle cx="105" cy="57" r="2" fill="#fff"/>
-              <circle cx="160" cy="35" r="3" fill="#fff"/>
-              <circle cx="300" cy="115" r="2" fill="#fff"/>
-              <path d="M0 192 L75 105 L135 175 L215 88 L305 190 L390 112 L480 188
-                       L480 300 L0 300 Z" fill="#34466e"/>
-              <path d="M0 225 Q115 175 240 225 T480 215 L480 300 L0 300 Z"
-                    fill="#205a69"/>
-              <path d="M88 300 Q120 207 203 198 Q270 202 308 300"
-                    fill="#344d4d"/>
-              <path d="M173 202 L211 134 L251 202 Z" fill="#d9c8ac"/>
-              <path d="M211 134 L251 202 L225 191 Z" fill="#f7e9ce"/>
-              <path d="M205 222 Q225 235 243 222" fill="none"
-                    stroke="#f6d17a" stroke-width="5" stroke-linecap="round"/>
-              <path d="M0 260 Q120 240 240 265 T480 250"
-                    fill="none" stroke="#54e5e2" stroke-width="4" opacity=".8"/>
-              <text x="24" y="274" fill="#fff" font-size="15"
-                    font-family="Arial">STORY WORLD CONCEPT</text>
-            </svg>
-          </div>
-
-          <div class="project-body">
-            <span class="tag">Story Worlds</span>
-            <h3>Fantasy Environment Concept</h3>
-            <p>
-              A visual concept for a story setting, using atmosphere,
-              landscape, lighting and color to suggest a fictional world.
-            </p>
-            <p class="project-note">
-              Website concept artwork — replace with your own finished study
-              when available.
-            </p>
-          </div>
-        </article>
-
-        <!-- Link to the user's cartoon channel -->
-        <article class="project-card">
-          <a class="project-art"
-             href="https://www.youtube.com/@AnnafiBraveheartBoy26"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Visit Annafi Braveheart Boy YouTube channel">
-            <div class="project-emoji" aria-hidden="true">🦸</div>
-          </a>
-          <div class="project-body">
-            <span class="tag">YouTube Channel</span>
-            <h3>Annafi Braveheart Boy</h3>
-            <p>
-              A channel for exploring cartoon-style adventures and
-              story-based video content.
-            </p>
-            <a class="text-link"
-               href="https://www.youtube.com/@AnnafiBraveheartBoy26"
-               target="_blank" rel="noopener noreferrer">
-              Visit channel ↗
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <a class="project-art"
-             href="https://www.youtube.com/@DetectiveAyan26"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Visit Detective Ayan YouTube channel">
-            <div class="project-emoji" aria-hidden="true">🔎</div>
-          </a>
-          <div class="project-body">
-            <span class="tag">YouTube Channel</span>
-            <h3>Detective Ayan</h3>
-            <p>
-              A channel connected with story-led creative video projects
-              and character-based adventures.
-            </p>
-            <a class="text-link"
-               href="https://www.youtube.com/@DetectiveAyan26"
-               target="_blank" rel="noopener noreferrer">
-              Visit channel ↗
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="channels">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Video Projects</div>
-        <h2>My YouTube <span>Channels</span></h2>
-        <p class="section-intro">
-          Visit my channels to view published creative projects and
-          see examples of my video storytelling.
-        </p>
-      </div>
-
-      <div class="channel-grid">
-        <article class="channel-card">
-          <div class="icon" aria-hidden="true">🕵️</div>
-          <h3>Detective Ayan</h3>
-          <p>Story-led video and detective adventure content.</p>
-          <a class="btn btn-secondary"
-             href="https://www.youtube.com/@DetectiveAyan26"
-             target="_blank" rel="noopener noreferrer">
-            Open YouTube Channel
-          </a>
-        </article>
-
-        <article class="channel-card">
-          <div class="icon" aria-hidden="true">🦸</div>
-          <h3>Annafi Braveheart Boy</h3>
-          <p>Cartoon-style adventures and character-led content.</p>
-          <a class="btn btn-secondary"
-             href="https://www.youtube.com/@AnnafiBraveheartBoy26"
-             target="_blank" rel="noopener noreferrer">
-            Open YouTube Channel
-          </a>
-        </article>
-
-        <article class="channel-card">
-          <div class="icon" aria-hidden="true">🎥</div>
-          <h3>Featured Video</h3>
-          <p>Watch my Bengali adventure video project.</p>
-          <a class="btn btn-secondary"
-             href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
-             target="_blank" rel="noopener noreferrer">
-            Watch Video
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <div class="eyebrow">Contact &amp; Collaboration</div>
-        <h2>Let's create something <span style="color:var(--cyan)">meaningful</span></h2>
-        <p class="section-intro">
-          I am interested in remote creative opportunities involving
-          AI-assisted visual content, cartoon concepts and digital storytelling.
-          Visit my profiles to explore my projects.
-        </p>
-
-        <div class="social-links">
-          <a class="btn btn-secondary"
-             href="https://www.linkedin.com/in/mdmahbuburmamun/"
-             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-
-          <a class="btn btn-secondary"
-             href="https://www.facebook.com/mahbubai.creation/"
-             target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-
-          <a class="btn btn-secondary"
-             href="https://www.instagram.com/mr3115322026/"
-             target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-
-          <a class="btn btn-secondary"
-             href="https://x.com/mahbubur_m99646"
-             target="_blank" rel="noopener noreferrer">X ↗</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>© <span id="year"></span> Mahbub AI Creation. All rights reserved.</p>
-    <p>AI-assisted creative work and digital storytelling.</p>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-</body>
-</html>
+            Refining visual concepts and exploring alternatives
