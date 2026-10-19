@@ -1,136 +1,1206 @@
 
-<!-- CLIENT & BUYER COLLABORATION SECTION -->
-<section id="clients" class="client-section">
-  <div class="client-container">
-    <p class="client-label">PROFESSIONAL COLLABORATION</p>
-    <h2>Client & Buyer Collaboration</h2>
-    <p class="client-intro">
-      Supporting garment production teams through reliable cutting operations,
-      quality control, fabric utilization and timely production planning.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07131f">
+  <meta name="description" content="MD. Mahbubur Rahman Mamun — Garments Cutting Manager with 18.9 years of garment industry experience, specializing in knit cutting operations, fabric consumption, automatic cutting systems and production management.">
+  <title>MD. Mahbubur Rahman Mamun | Cutting Manager</title>
+
+  <style>
+    :root {
+      --bg: #07131f;
+      --bg2: #0d2635;
+      --card: #102b3b;
+      --accent: #45d6c5;
+      --text: #f3f8fc;
+      --muted: #b7cbd6;
+      --border: rgba(69, 214, 197, .24);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 19, 31, .96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 13px;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(69,214,197,.14), transparent 40%),
+        linear-gradient(135deg, #07131f, #102b3b 60%, #07131f);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 50px;
+      align-items: center;
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5.2vw, 57px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 690px;
+      margin-bottom: 25px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid var(--accent);
+      transition: .2s;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #061720;
+    }
+
+    .button-secondary {
+      color: var(--text);
+      background: transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: .88;
+    }
+
+    .profile-frame {
+      max-width: 340px;
+      width: 100%;
+      justify-self: center;
+      padding: 10px;
+      border: 1px solid var(--accent);
+      border-radius: 25px;
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 25px 70px rgba(0,0,0,.3);
+    }
+
+    .profile-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 17px;
+    }
+
+    .profile-caption {
+      text-align: center;
+      padding: 13px 5px 5px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* STATS */
+    .stats {
+      padding: 25px 0;
+      background: #0b202d;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--accent);
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .info-card {
+      background: linear-gradient(145deg, #102b3b, #0b202d);
+      border: 1px solid var(--border);
+      padding: 27px;
+      border-radius: 17px;
+    }
+
+    .info-card h3 {
+      margin-bottom: 17px;
+      color: var(--accent);
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-size: 13px;
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    .info-row span:first-child {
+      color: var(--muted);
+    }
+
+    .info-row span:last-child {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    /* SKILLS */
+    .skills-section {
+      background: #0a1c29;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .skill-card .icon {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .skill-card h3 {
+      color: var(--accent);
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* EXPERIENCE */
+    .experience-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .experience-card {
+      padding: 25px;
+      border-radius: 14px;
+      background: var(--card);
+      border-left: 3px solid var(--accent);
+    }
+
+    .experience-card h3 {
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+
+    .experience-card .company {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .experience-card .date {
+      display: block;
+      color: #9fb7c4;
+      font-size: 12px;
+      margin: 5px 0 12px;
+    }
+
+    .experience-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* OPERATIONAL EXPERTISE */
+    .expertise-section {
+      background: #0a1c29;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .expertise-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 17px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.025);
+    }
+
+    .expertise-item .check {
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .expertise-item span:last-child {
+      font-size: 14px;
+    }
+
+    /* EDUCATION */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .education-card {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+    }
+
+    .education-card h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .training-box {
+      margin-top: 25px;
+      padding: 24px;
+      background: rgba(69,214,197,.06);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .training-box h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .training-box p {
+      color: var(--muted);
+    }
+
+    /* OUR CLIENTS */
+    #our-clients {
+      background:
+        radial-gradient(ellipse at top, #17394a 0%, transparent 60%),
+        linear-gradient(135deg, #07131f, #0b2533 55%, #07131f);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .clients-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 38px;
+    }
+
+    .clients-header .section-intro {
+      margin: 0 auto;
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .client-item {
+      min-width: 0;
+      padding: 23px 18px;
+      text-align: center;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .client-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .client-logo {
+      height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .client-logo img {
+      display: block;
+      max-width: 100%;
+      max-height: 120px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .client-item h3 {
+      font-size: 17px;
+      color: var(--text);
+    }
+
+    .clients-note {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background: #0a1c29;
+    }
+
+    .contact-card {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding: 38px 25px;
+      background: linear-gradient(145deg, #102b3b, #0b202d);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .contact-card .section-intro {
+      margin: 0 auto 24px;
+    }
+
+    .contact-details {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .contact-pill {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 23px 15px;
+      text-align: center;
+      color: #9fb5c1;
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .profile-frame {
+        max-width: 270px;
+        grid-row: 1;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .clients-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .navbar {
+        padding: 13px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav {
+        gap: 10px 15px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 22px;
+      }
+
+      .skills-grid,
+      .education-grid,
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .clients-grid {
+        gap: 12px;
+      }
+
+      .client-item {
+        padding: 13px 9px;
+      }
+
+      .client-logo {
+        height: 105px;
+        padding: 8px;
+      }
+
+      .client-logo img {
+        max-height: 88px;
+      }
+
+      .client-item h3 {
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        letter-spacing: -.7px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .clients-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home">MAHBUBUR MAMUN</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#our-clients">Our Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <span class="eyebrow">Garment Industry Professional</span>
+
+          <h1>
+            MD. MAHBUBUR<br>
+            RAHMAN <span>MAMUN</span>
+          </h1>
+
+          <h2 style="font-size:21px; margin-bottom:15px;">
+            Garments Cutting Manager
+          </h2>
+
+          <p class="hero-description">
+            Experienced garment industry professional with 18.9 years
+            of experience, including 10 years in cutting management.
+            Specialized in knit cutting operations, fabric consumption,
+            marker efficiency, automatic cutting systems, quality control
+            and production planning.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">
+              View Experience
+            </a>
+            <a class="button button-secondary" href="#contact">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="profile-frame">
+          <img
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEhVyRT3NIL3pIXbuQcw7Lnb_CO09K7OO_-F2BaBN_teP4jBgAzXQzDdiQ0_kRQJvXtuDurKsmFydqoiovPoB4oQ4WSLDNc5yupYi9O5prehyPdVp97uAt1FFCgmUbQv7c8aqV3ne5Cw6bKNQmu43odZePM9sw4AM2GW3JQOTo5dYEWmE_Z2ZKPoUwxD_Dss=s16000"
+            alt="MD. Mahbubur Rahman Mamun"
+            fetchpriority="high">
+          <div class="profile-caption">
+            Cutting Management · Knit Garments · Production Excellence
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAREER STATS -->
+    <section class="stats" aria-label="Career highlights">
+      <div class="container stats-grid">
+        <div class="stat">
+          <strong>18.9</strong>
+          <span>Years in Garments</span>
+        </div>
+        <div class="stat">
+          <strong>10</strong>
+          <span>Years in Cutting Management</span>
+        </div>
+        <div class="stat">
+          <strong>2</strong>
+          <span>Automatic Cutter Systems</span>
+        </div>
+        <div class="stat">
+          <strong>6S</strong>
+          <span>Lean & Improvement Training</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container about-grid">
+
+        <div class="about-copy">
+          <span class="eyebrow">About Me</span>
+          <h2 class="section-title">Professional Profile</h2>
+
+          <p>
+            I am a garment industry professional with extensive experience
+            in knit garment cutting operations and cutting department
+            management. My experience covers production planning, fabric
+            consumption, marker efficiency, manpower management, cutting
+            quality and delivery coordination.
+          </p>
+
+          <p>
+            I have worked with Lectra and Bullmer automatic cutting
+            machines and Boke and Lectra spreading machines. My technical
+            knowledge includes fabric relaxation, fabric inspection,
+            GSM, dia, shade variation, shrinkage and cut-panel quality.
+          </p>
+
+          <p>
+            I coordinate with CAD, Merchandising, Dyeing, Printing,
+            Embroidery, Sewing and Quality teams to support production
+            targets, minimize fabric wastage and maintain smooth
+            factory operations.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Professional Overview</h3>
+
+          <div class="info-row">
+            <span>Current Position</span>
+            <span>Cutting Manager</span>
+          </div>
+
+          <div class="info-row">
+            <span>Industry</span>
+            <span>Knit Garments</span>
+          </div>
+
+          <div class="info-row">
+            <span>Location</span>
+            <span>Dhaka / Narayanganj, Bangladesh</span>
+          </div>
+
+          <div class="info-row">
+            <span>Auto Cutting</span>
+            <span>Lectra, Bullmer</span>
+          </div>
+
+          <div class="info-row">
+            <span>Spreading</span>
+            <span>Boke, Lectra</span>
+          </div>
+
+          <div class="info-row">
+            <span>Focus</span>
+            <span>Quality, Efficiency, Delivery</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <span class="eyebrow">Core Competencies</span>
+        <h2 class="section-title">Technical Skills & Expertise</h2>
+
+        <p class="section-intro">
+          Practical expertise in cutting operations, automatic machinery,
+          fabric utilization, production control and team leadership.
+        </p>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <div class="icon">✂️</div>
+            <h3>Cutting Operations</h3>
+            <p>
+              Knit garment cutting, cutting quality, panel inspection,
+              bundle control and line feeding.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="icon">⚙️</div>
+            <h3>Automatic Cutting</h3>
+            <p>
+              Lectra and Bullmer automatic cutter operations,
+              machine utilization and cutting productivity.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="icon">📐</div>
+            <h3>Spreading & Marker</h3>
+            <p>
+              Boke and Lectra spreading systems, marker efficiency
+              and spreading quality.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="icon">📊</div>
+            <h3>Fabric Consumption</h3>
+            <p>
+              Consumption monitoring, wastage reduction,
+              fabric utilization and cost control.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="icon">👥</div>
+            <h3>Team Leadership</h3>
+            <p>
+              Manpower planning, operator supervision,
+              team development and productivity management.
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="icon">📅</div>
+            <h3>Production Planning</h3>
+            <p>
+              Daily cutting plans, master plans, target monitoring
+              and on-time cut-panel delivery.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL EXPERTISE -->
+    <section class="expertise-section">
+      <div class="container">
+        <span class="eyebrow">Operational Excellence</span>
+        <h2 class="section-title">Key Strengths</h2>
+
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <span class="check">✓</span>
+            <span>Fabric relaxation, inspection, GSM and dia control</span>
+          </div>
+
+          <div class="expertise-item">
+            <span class="check">✓</span>
+            <span>Shade segregation and shrinkage management</span>
+          </div>
+
+          <div class="expertise-item">
+            <span class="check">✓</span>
+            <span>Daily cutting plan and production target achievement</span>
+          </div>
+
+          <div class="expertise-item">
+            <span class="check">✓</span>
+            <span>Cut-panel quality and sewing-line feeding coordination</span>
+          </div>
+
+          <div class="expertise-item">
+            <span class="check">✓</span>
+            <span>Machine utilization and manpower planning</span>
+          </div>
+
+          <div class="expertise-item">
+            <span class="check">✓</span>
+            <span>6S, Lean Manufacturing and continuous improvement</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <span class="eyebrow">Career Journey</span>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <p class="section-intro">
+          Career progression across cutting operations and management
+          roles in the garment industry.
+        </p>
+
+        <div class="experience-list">
+
+          <article class="experience-card">
+            <h3>Cutting Manager</h3>
+            <div class="company">Oxford Knit Composite Ltd. — Pretty Group</div>
+            <span class="date">August 2022 – Present</span>
+            <p>
+              Responsible for cutting department operations, production
+              planning, fabric consumption control, cutting quality,
+              manpower management, automatic machine utilization and
+              coordination with relevant departments to meet production
+              requirements.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Cutting Manager</h3>
+            <div class="company">Amigo Bangladesh Ltd. — Crystal Group</div>
+            <span class="date">June 2018 – July 2022</span>
+            <p>
+              Managed cutting operations, production targets, fabric
+              utilization, quality monitoring and coordination to support
+              garment production requirements.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Cutting Assistant Manager</h3>
+            <div class="company">Jann Composite Ltd. — Jann Group</div>
+            <span class="date">February 2016 – May 2018</span>
+            <p>
+              Supported cutting department management, daily planning,
+              manpower allocation, cutting quality and production
+              coordination.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Cutting In-charge</h3>
+            <div class="company">Jann Composite Ltd. — Jann Group</div>
+            <span class="date">February 2013 – January 2016</span>
+            <p>
+              Supervised cutting-room activities, spreading, cutting
+              schedules, quality checks and cut-panel delivery.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Cutting Assistant In-charge</h3>
+            <div class="company">Jann Composite Ltd. — Jann Group</div>
+            <span class="date">July 2005 – October 2007</span>
+            <p>
+              Assisted with cutting-room supervision, spreading,
+              workforce coordination and quality monitoring.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Cutting Supervisor</h3>
+            <div class="company">Jann Composite Ltd. — Jann Group</div>
+            <span class="date">May 2002 – June 2005</span>
+            <p>
+              Supervised day-to-day cutting activities and supported
+              quality, productivity and production schedules.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION AND TRAINING -->
+    <section id="education" class="skills-section">
+      <div class="container">
+        <span class="eyebrow">Academic Background</span>
+        <h2 class="section-title">Education & Training</h2>
+
+        <div class="education-grid">
+
+          <article class="education-card">
+            <h3>Bachelor's Degree — Hospitality Management</h3>
+            <p>
+              College of Tourism and Hotel Management
+              (Cyprus Foreign Institute), 2012
+            </p>
+          </article>
+
+          <article class="education-card">
+            <h3>International Certificate in Computer Study</h3>
+            <p>
+              NCC Education, UK Manchester, 2008
+            </p>
+          </article>
+
+          <article class="education-card">
+            <h3>Diploma in Fundamental Course in Computer</h3>
+            <p>
+              Bhuiyan Institute of Technology, Dhaka, 2001–2002
+            </p>
+          </article>
+
+          <article class="education-card">
+            <h3>SSC — Science</h3>
+            <p>
+              Hashadah Secondary School, 1997
+            </p>
+          </article>
+
+        </div>
+
+        <div class="training-box">
+          <h3>Professional Training</h3>
+          <p>
+            • 6S and Lean Manufacturing — Amigo, 2020<br>
+            • Garments Production Development — Jann Composite, 2019
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR CLIENTS: POSITIONED IMMEDIATELY BEFORE CONTACT -->
+    <section id="our-clients">
+      <div class="container">
+
+        <div class="clients-header">
+          <span class="eyebrow">Professional Brand Gallery</span>
+          <h2 class="section-title">Our Clients</h2>
+          <p class="section-intro">
+            Brand images shared from my Blogger collection.
+          </p>
+        </div>
+
+        <div class="clients-grid">
+
+          <article class="client-item">
+            <div class="client-logo">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgO-OXNc0Ibt7nEYDykww_QdNWhH-FulrLoGlFtT40zvq2kStA3pFc9tOmdZApJUJTRg30CMr5hq4351WZfkSD0NOUpMOvRrFk_9QkTAvcjy2HqayM6z_yQO8n-SruVvIgdWFsEdd6Ej1Y65bBNYz87WoihmWX3ydICb8JRYsDFTlnZC9KUNkC-ls4J1Kl_/w200-h200/P%26C.jpeg"
+                alt="P&C brand image"
+                loading="lazy">
+            </div>
+            <h3>P&amp;C</h3>
+          </article>
+
+          <article class="client-item">
+            <div class="client-logo">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioa8rH_QBqf0Q1YiEF1BcL2fxFy1HOsw-Usjri6wU6WD3X4XDPcBi_8y5US9XY8fkp6XSIMs1nBvspl77y8w7FEXDs6WJe0IEfxAgBG8xCkphL7eR51_RMGISR0iDARp1-S27txss1PGlwg1BxuAKdggZ7DviidxIH0TZKf1bxBP-iJ95rExYFFRRiQjPT/s1600/Cotton%20on.jpeg"
+                alt="Cotton On brand image"
+                loading="lazy">
+            </div>
+            <h3>Cotton On</h3>
+          </article>
+
+          <article class="client-item">
+            <div class="client-logo">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5caTrtfbh762Z6nEt0hrNxXRsLmkKy0lGmdgOXNyU1A7ja9C2BtRALAUT2jH9tIQiW2fxhDl3LF6HhDK8RTZowwdESOR6paLdTjLT1jtM2GHxL8trVjGhQRuhWwtiKp_xa6vyr8glbe3z8p0dLI0XUAWeKL4uW_x48BVe8MWRQ0TTjeAR1OGKF1LpUXRu/w200-h154/Rockwear.png"
+                alt="Rockwear brand image"
+                loading="lazy">
+            </div>
+            <h3>Rockwear</h3>
+          </article>
+
+          <article class="client-item">
+            <div class="client-logo">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWBkuJdnzmasjftlyq6nxfucSYItBr6_wVPpIRBV9YMoWobfgHuNcMnCsNpcpkI9AX86c2zfk7pBqRRiYRy3QGERgWAqTpdWYjDmF5KYiiAUdTNNGw3UcW5frXWfBQrGQJHN1QHWEqNzInAvUlrcYR3CYaOSahP7IdkUSr4kIsfMeTghDPitnMMShRIur2/w200-h171/New%20Yorker.jpeg"
+                alt="New Yorker brand image"
+                loading="lazy">
+            </div>
+            <h3>New Yorker</h3>
+          </article>
+
+          <article class="client-item">
+            <div class="client-logo">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcGTu2oI2VFrzjZHQQpFfzES1RLCXrQ9PucVsgcIlYP-UKplwlBQy6s67FSejEaDTJz1POu6d0HmfZmLvtVDEm722mTpaKox3pxxo9qWrilF2ZZKw2Y-6jnOwkLmw-7_NVA2qh2silE7pEI4qoPM_QV8U80rXOWVGOg4MztMOPkGDtc4X-smf-rG-CDBT6/w200-h179/Terenova.png"
+                alt="Terenova brand image"
+                loading="lazy">
+            </div>
+            <h3>Terenova</h3>
+          </article>
+
+          <article class="client-item">
+            <div class="client-logo">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPE0TanyI12VZ8PWP5ISZHGA-okSfhapGnshFpcmNgTTFWAGWFdxYOxWOjpZXNvr1ZzXgbNrTg45qe8g6f7V-PS7Gi84AGekCMVXDMAW3mkXFMisp7z2QH8tuA2nBwsrBs2EsT4l-ozwVt0opKGheYql6hB5xiwU_c9A42IUUYwC3jVH1sYNhTwccDvF_Y/w200-h200/Dsl.jpeg"
+                alt="DSL brand image"
+                loading="lazy">
+            </div>
+            <h3>DSL</h3>
+          </article>
+
+        </div>
+
+        <p class="clients-note">
+          Brand names and logos belong to their respective owners.
+          Displaying a logo does not by itself establish a direct client relationship.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CONTACT: AFTER OUR CLIENTS -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+
+          <span class="eyebrow">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+
+          <p class="section-intro">
+            For professional opportunities and discussions related to
+            garment cutting management, production planning and cutting
+            operations, please contact me.
+          </p>
+
+          <div class="contact-details">
+            <a class="contact-pill" href="mailto:mahbuburmbd@gmail.com">
+              Email: mahbuburmbd@gmail.com
+            </a>
+
+            <a class="contact-pill" href="tel:+8801534218837">
+              Phone: +8801534218837
+            </a>
+
+            <span class="contact-pill">
+              Dhaka / Narayanganj, Bangladesh
+            </span>
+          </div>
+
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="button button-primary"
+               href="mailto:mahbuburmbd@gmail.com">
+              Send Email
+            </a>
+
+            <a class="button button-secondary"
+               href="https://www.linkedin.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+
+            <a class="button button-secondary"
+               href="https://www.facebook.com/mahbubai.creation/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Facebook
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © <span id="copyright-year">2026</span>
+      MD. Mahbubur Rahman Mamun. All rights reserved.
     </p>
+  </footer>
 
-    <div class="client-grid">
-      <article class="client-card">
-        <div class="client-icon">✂️</div>
-        <h3>Cutting Quality</h3>
-        <p>
-          Accurate cutting, panel inspection, shade segregation and
-          quality control to support buyer requirements.
-        </p>
-      </article>
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
 
-      <article class="client-card">
-        <div class="client-icon">📊</div>
-        <h3>Fabric Consumption</h3>
-        <p>
-          Marker efficiency, fabric consumption monitoring and
-          wastage-reduction initiatives.
-        </p>
-      </article>
-
-      <article class="client-card">
-        <div class="client-icon">🏭</div>
-        <h3>Production Coordination</h3>
-        <p>
-          Cutting plans, manpower allocation and timely
-          cut-panel feeding to support sewing-line targets.
-        </p>
-      </article>
-
-      <article class="client-card">
-        <div class="client-icon">✓</div>
-        <h3>Quality & Compliance</h3>
-        <p>
-          Following approved specifications, documented procedures
-          and factory quality requirements.
-        </p>
-      </article>
-    </div>
-
-    <div class="client-experience">
-      <h3>Garment Industry Experience</h3>
-      <p>
-        Oxford Knit Composite Ltd. · Amigo Bangladesh Ltd. ·
-        Jann Composite Ltd.
-      </p>
-      <span>
-        Professional employment history — not a claim of direct
-        client or buyer relationships.
-      </span>
-    </div>
-  </div>
-</section>
-
-<style>
-.client-section {
-  padding: 75px 22px;
-  background: linear-gradient(135deg, #071827, #102c3a, #07121f);
-  color: #f1f7fa;
-  font-family: Arial, sans-serif;
-}
-.client-container {
-  max-width: 1100px;
-  margin: auto;
-}
-.client-label {
-  color: #45d6c5;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-.client-section h2 {
-  font-size: clamp(28px, 4vw, 42px);
-  margin: 12px 0;
-}
-.client-intro {
-  max-width: 720px;
-  color: #b8cbd5;
-  line-height: 1.8;
-  margin-bottom: 32px;
-}
-.client-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-.client-card {
-  background: rgba(255,255,255,.055);
-  border: 1px solid rgba(69,214,197,.24);
-  border-radius: 16px;
-  padding: 25px;
-  transition: transform .2s, border-color .2s;
-}
-.client-card:hover {
-  transform: translateY(-5px);
-  border-color: #45d6c5;
-}
-.client-icon {
-  font-size: 30px;
-  margin-bottom: 14px;
-}
-.client-card h3,
-.client-experience h3 {
-  color: #45d6c5;
-  margin-bottom: 10px;
-}
-.client-card p {
-  color: #c5d5dc;
-  line-height: 1.75;
-  font-size: 14px;
-}
-.client-experience {
-  margin-top: 28px;
-  padding: 25px;
-  border-left: 3px solid #45d6c5;
-  background: rgba(255,255,255,.04);
-  border-radius: 8px;
-}
-.client-experience p {
-  line-height: 1.8;
-}
-.client-experience span {
-  color: #9fb5c1;
-  font-size: 12px;
-  line-height: 1.7;
-}
-</style>
+</body>
+</html>
