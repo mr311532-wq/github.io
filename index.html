@@ -1,762 +1,213 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b1728">
-
-  <meta name="description" content="MD Mahbubur Rahman Mamun - Experienced RMG Garments Cutting Manager specializing in knit garments, Lectra and Bullmer auto cutters, fabric consumption, production planning and cutting room management.">
-
-  <meta name="keywords" content="Cutting Manager, RMG, Knit Garments, Lectra, Bullmer Auto Cutter, Fabric Consumption, Marker Efficiency, Cutting Room Management, Bangladesh Garments">
-
-  <meta property="og:title" content="MD Mahbubur Rahman Mamun | RMG Cutting Manager">
-  <meta property="og:description" content="Professional portfolio of an experienced Garments Cutting Manager.">
-  <meta property="og:type" content="website">
-
-  <title>MD Mahbubur Rahman Mamun | Cutting Manager</title>
-
-  <style>
-    :root {
-      --bg: #081321;
-      --surface: #101f32;
-      --surface2: #172b42;
-      --text: #f4f8fc;
-      --muted: #b0bfd0;
-      --accent: #40dfcf;
-      --accent2: #a2fff2;
-      --border: rgba(255,255,255,.12);
-      --container: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(var(--container), 90%);
-      margin: auto;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(8,19,33,.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding: 12px 0;
-    }
-
-    .logo {
-      font-size: 1.08rem;
-      font-weight: 800;
-      letter-spacing: -.3px;
-    }
-
-    .logo span,
-    h1 span,
-    h2 span {
-      color: var(--accent);
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-      color: var(--muted);
-      font-size: .86rem;
-    }
-
-    .nav-links a:hover,
-    .text-link:hover {
-      color: var(--accent);
-    }
-
-    section {
-      padding: 78px 0;
-    }
-
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      background:
-        radial-gradient(ellipse at 85% 25%, rgba(64,223,207,.15), transparent 36%),
-        radial-gradient(ellipse at 10% 80%, rgba(42,98,154,.18), transparent 40%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr .75fr;
-      align-items: center;
-      gap: 48px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: .76rem;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: clamp(2.3rem, 5.5vw, 4.2rem);
-      line-height: 1.12;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    h3 {
-      font-size: 1.12rem;
-      line-height: 1.4;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: var(--muted);
-    }
-
-    .section-heading {
-      margin-bottom: 32px;
-    }
-
-    .section-intro {
-      max-width: 760px;
-    }
-
-    .actions,
-    .social-links,
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 9px;
-      font-size: .9rem;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      transition: transform .2s, background .2s;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #071922;
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent2);
-    }
-
-    .btn-secondary {
-      background: rgba(255,255,255,.04);
-    }
-
-    .hero-panel {
-      padding: 30px;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      background: linear-gradient(145deg, #172b42, #0e1b2c);
-      box-shadow: 0 25px 70px rgba(0,0,0,.18);
-    }
-
-    .hero-symbol {
-      font-size: 4.4rem;
-      margin-bottom: 10px;
-    }
-
-    .hero-panel h3 {
-      font-size: 1.3rem;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .stat {
-      padding: 15px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid var(--border);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.45rem;
-      color: var(--accent);
-      line-height: 1.4;
-    }
-
-    .stat span {
-      display: block;
-      color: var(--muted);
-      font-size: .78rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      overflow-wrap: anywhere;
-    }
-
-    .card p {
-      font-size: .92rem;
-    }
-
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 13px;
-    }
-
-    .tag {
-      display: inline-block;
-      color: var(--accent);
-      background: rgba(64,223,207,.09);
-      border: 1px solid rgba(64,223,207,.17);
-      border-radius: 20px;
-      padding: 4px 10px;
-      font-size: .73rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .skill-tags {
-      margin-top: 24px;
-    }
-
-    .skill-tag {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 8px 13px;
-      font-size: .84rem;
-      color: var(--text);
-    }
-
-    .experience-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .experience {
-      position: relative;
-      padding: 25px 25px 25px 29px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      border-radius: 12px;
-    }
-
-    .experience h3 {
-      font-size: 1.15rem;
-      margin-bottom: 4px;
-    }
-
-    .company {
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-
-    .date {
-      display: inline-block;
-      color: var(--muted);
-      font-size: .83rem;
-      margin-bottom: 12px;
-    }
-
-    .experience ul {
-      padding-left: 20px;
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .experience li {
-      margin: 5px 0;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .detail-list {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .detail-list li {
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    .detail-list li:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .detail-list strong {
-      color: var(--text);
-    }
-
-    .buyer-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .buyer {
-      border: 1px solid var(--border);
-      background: var(--surface2);
-      border-radius: 10px;
-      padding: 13px 18px;
-      font-weight: 700;
-      font-size: .9rem;
-    }
-
-    .contact-box {
-      padding: 34px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background:
-        radial-gradient(ellipse at 90% 10%, rgba(64,223,207,.09), transparent 40%),
-        var(--surface);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 24px;
-    }
-
-    .contact-item {
-      padding: 17px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.025);
-    }
-
-    .contact-item small {
-      display: block;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .contact-item a {
-      overflow-wrap: anywhere;
-      font-weight: 700;
-    }
-
-    footer {
-      padding: 26px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: .85rem;
-    }
-
-    .back-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 43px;
-      height: 43px;
-      display: grid;
-      place-items: center;
-      background: var(--accent);
-      color: #071922;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      font-weight: 900;
-      box-shadow: 0 5px 20px rgba(0,0,0,.2);
-    }
-
-    @media (max-width: 850px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 55px;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .nav {
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 580px) {
-      section {
-        padding: 54px 0;
-      }
-
-      .grid,
-      .two-column,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav {
-        flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 12px;
-        font-size: .82rem;
-      }
-
-      .hero-panel,
-      .contact-box {
-        padding: 23px;
-      }
-
-      .experience {
-        padding: 21px 18px;
-      }
-
-      .stat strong {
-        font-size: 1.25rem;
-      }
-    }
-
-    @media print {
-      header,
-      .actions,
-      .social-links,
-      .back-top {
-        display: none !important;
-      }
-
-      body {
-        background: #fff;
-        color: #111;
-      }
-
-      p,
-      .muted,
-      .experience ul,
-      .detail-list li {
-        color: #333;
-      }
-
-      section {
-        padding: 25px 0;
-      }
-
-      .card,
-      .experience,
-      .hero-panel,
-      .contact-box {
-        background: #fff;
-        color: #111;
-        border: 1px solid #ccc;
-        break-inside: avoid;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MD Mahbubur Rahman Mamun - RMG Knit Garments Cutting Manager Portfolio">
+<title>MD Mahbubur Rahman Mamun | Cutting Manager</title>
+<style>
+:root{--navy:#10253f;--blue:#176b87;--teal:#19a7a1;--light:#f3f7fa;--text:#263548}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.7}
+a{text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+.nav{min-height:68px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:12px 0}
+.brand{color:#fff;font-weight:800}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{color:#e9f5ff;font-size:13px}
+.hero{background:linear-gradient(120deg,#10253fee,#176b87dc),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=85") center/cover;color:#fff;padding:75px 0}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:35px;align-items:center}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.15;margin:12px 0}
+.hero-photo{height:320px;border-radius:20px;border:4px solid #ffffff70}
+.eyebrow{color:#79eee0;font-weight:bold;letter-spacing:2px;font-size:13px}
+.hero p{color:#e1edf5}
+.actions,.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;border:0;border-radius:8px;padding:11px 16px;font-weight:bold;font-size:14px;cursor:pointer}
+.primary{background:var(--teal);color:white}
+.light-btn{background:#fff;color:var(--navy)}
+.outline{border:1px solid #ffffffa0;color:white;background:transparent}
+section{padding:65px 0}
+.heading{margin-bottom:25px}
+.heading h2{font-size:30px;color:var(--navy);margin:0 0 6px}
+.heading p{margin:0;color:#64748b}
+.intro,.panel,.card,.job{background:#fff;border:1px solid #e5edf3;border-radius:14px;box-shadow:0 5px 20px #10253f0a}
+.intro{padding:23px;margin-bottom:22px}
+.grid{display:grid;gap:20px}
+.about-grid{grid-template-columns:repeat(3,1fr)}
+.card{overflow:hidden}
+.card img{width:100%;height:185px;object-fit:cover;display:block}
+.card-body{padding:18px}
+.card h3,.panel h3,.job h3{color:var(--navy);margin:0 0 8px}
+.card p,.skill p{font-size:14px;color:#596779;margin:0}
+.tag-label{display:inline-block;background:#e7f8f6;color:#087c78;padding:4px 9px;border-radius:30px;font-size:11px;font-weight:bold;margin-bottom:8px}
+.stats{grid-template-columns:repeat(3,1fr);margin-top:22px}
+.stat{background:var(--navy);color:#fff;border-radius:12px;padding:20px;text-align:center}
+.stat strong{display:block;font-size:30px;color:#5ce1d4}
+.stat span{font-size:13px}
+.skills-grid{grid-template-columns:repeat(3,1fr)}
+.skill{background:#fff;border-radius:12px;padding:20px;border-left:4px solid var(--teal)}
+.skill h3{margin:0 0 8px;color:var(--navy)}
+.tags,.buyers{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.tag{background:#e5f2f8;color:#164d68;border-radius:6px;padding:7px 10px;font-size:13px}
+.experience{border-left:3px solid var(--teal);padding-left:22px}
+.job{position:relative;padding:21px;margin-bottom:18px}
+.job:before{content:"";position:absolute;left:-30px;top:25px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:3px solid var(--light)}
+.date{color:#087c78;font-size:13px;font-weight:bold}
+.job ul{padding-left:20px;margin-bottom:0}
+.two-col,.contact-grid{grid-template-columns:1fr 1fr}
+.panel{padding:24px}
+.buyer{background:#fff;border:1px solid #dce7ef;border-radius:9px;padding:13px 18px;font-weight:800;color:var(--navy)}
+.contact{background:var(--navy);color:#fff}
+.contact .heading h2{color:#fff}
+.contact .heading p{color:#d0dfeb}
+.contact-card{padding:24px;background:#ffffff10;border:1px solid #ffffff20;border-radius:14px}
+.contact-card a:not(.btn){color:#76e8dc;overflow-wrap:anywhere}
+footer{text-align:center;background:#09182b;color:#c6d5e4;padding:20px;font-size:13px}
+@media(max-width:800px){.hero-grid,.about-grid,.skills-grid,.two-col,.contact-grid,.stats{grid-template-columns:1fr 1fr}.hero-photo{height:240px}}
+@media(max-width:560px){.hero-grid,.about-grid,.skills-grid,.two-col,.contact-grid,.stats{grid-template-columns:1fr}.hero{padding:50px 0}section{padding:45px 0}}
+@media print{header,.actions,.socials{display:none!important}section{padding:25px 0}body{background:#fff}}
+</style>
 </head>
-
 <body>
-
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home">
-      MAHBUB <span>| CUTTING MANAGER</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#buyers">Buyers</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="container nav">
+<a class="brand" href="#home">MR MAMUN | CUTTING MANAGER</a>
+<nav>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#buyers">Buyers</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+</div>
 </header>
 
 <main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">RMG • KNIT GARMENTS • COMPOSITE FACTORY</div>
+<h1>MD Mahbubur Rahman Mamun</h1>
+<h2>Experienced Cutting Manager</h2>
+<p>18.9 years of garment industry experience, including 10 years in cutting management. Focused on fabric utilization, cutting quality, productivity, cost control and on-time delivery.</p>
+<div class="actions">
+<a class="btn primary" href="#contact">Contact Me</a>
+<a class="btn light-btn" href="#experience">View Experience</a>
+<button class="btn outline" onclick="window.print()">Print / Save PDF</button>
+</div>
+<div class="socials">
+<a class="btn light-btn" href="https://www.linkedin.com/in/mdmahburburmamun/" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
+<a class="btn outline" href="https://www.facebook.com/mahbubai.creation/" target="_blank" rel="noopener noreferrer">Facebook Profile ↗</a>
+</div>
+</div>
+<img class="hero-photo" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Professional team collaborating in a workplace">
+</div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-grid">
+<section id="about">
+<div class="container">
+<div class="heading"><h2>About Me</h2><p>My experience, technical strengths and professional approach.</p></div>
+<div class="intro">I am a garment industry professional specializing in knit garments cutting operations and composite factory coordination. I focus on improving cutting-room efficiency, reducing fabric wastage, maintaining quality standards and achieving production targets through practical planning and team leadership.</div>
+<div class="grid about-grid">
+<article class="card">
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=85" alt="Industrial technical work representing cutting operations">
+<div class="card-body"><span class="tag-label">01 • OPERATIONS</span><h3>Cutting Room Management</h3><p>Cutting-room workflow, daily target monitoring, manpower allocation, production follow-up and factory coordination.</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=85" alt="Planning documents representing fabric consumption analysis">
+<div class="card-body"><span class="tag-label">02 • COST CONTROL</span><h3>Fabric Consumption & Marker Efficiency</h3><p>Fabric consumption analysis, marker efficiency, material utilization and practical fabric-wastage reduction.</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=85" alt="Technical professional working with equipment">
+<div class="card-body"><span class="tag-label">03 • TECHNOLOGY</span><h3>CAD & Auto Cutting</h3><p>Knowledge of Lectra and Bullmer auto cutters, CAD coordination, marker planning and cutting-machine workflow.</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=85" alt="Technical inspection representing quality control">
+<div class="card-body"><span class="tag-label">04 • QUALITY</span><h3>Fabric & Cutting Quality</h3><p>Fabric inspection, shrinkage control, shade, GSM and dia considerations, and cutting quality assurance.</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=85" alt="Team collaboration representing leadership">
+<div class="card-body"><span class="tag-label">05 • LEADERSHIP</span><h3>Team & Manpower Management</h3><p>Work allocation, team development, problem-solving, productivity monitoring and safe working practices.</p></div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=85" alt="Business team planning and coordination">
+<div class="card-body"><span class="tag-label">06 • COORDINATION</span><h3>Planning & Department Coordination</h3><p>Coordination with CAD, Merchandising, Planning, Dyeing, Printing, Embroidery, Sewing and Quality teams.</p></div>
+</article>
+</div>
+<div class="grid stats">
+<div class="stat"><strong>18.9</strong><span>Years in Garments</span></div>
+<div class="stat"><strong>10</strong><span>Years in Cutting Management</span></div>
+<div class="stat"><strong>4</strong><span>International Buyer Names in Experience</span></div>
+</div>
+</div>
+</section>
 
-      <div>
-        <div class="eyebrow">RMG Professional Portfolio</div>
+<section id="skills">
+<div class="container">
+<div class="heading"><h2>Core Skills & Expertise</h2><p>Technical and managerial capabilities for RMG cutting operations.</p></div>
+<div class="grid skills-grid">
+<div class="skill"><h3>Technical Skills</h3><p>CAD coordination, Lectra and Bullmer auto cutters, Boke and Lectra spreading machines, lay planning and marker efficiency.</p></div>
+<div class="skill"><h3>Fabric & Quality</h3><p>Fabric inspection, consumption, shrinkage control, shade/GSM/dia monitoring, cutting quality and wastage control.</p></div>
+<div class="skill"><h3>Management</h3><p>Production planning, manpower management, team leadership, target monitoring, cost control and problem-solving.</p></div>
+</div>
+<div class="tags">
+<span class="tag">Knit Garments</span><span class="tag">Composite Factory</span><span class="tag">Cutting Room Management</span><span class="tag">Fabric Consumption</span><span class="tag">Marker Efficiency</span><span class="tag">Lectra</span><span class="tag">Bullmer Auto Cutter</span><span class="tag">Fabric Spreading</span><span class="tag">Lean Manufacturing</span><span class="tag">6S</span><span class="tag">Quality Assurance</span><span class="tag">Cost Control</span>
+</div>
+</div>
+</section>
 
-        <h1>
-          MD Mahbubur<br>
-          Rahman Mamun<br>
-          <span>Cutting Manager</span>
-        </h1>
+<section id="experience">
+<div class="container">
+<div class="heading"><h2>Professional Experience</h2><p>Career history in garment cutting operations.</p></div>
+<div class="experience">
+<article class="job"><h3>Cutting Manager — Oxford Knit Composite Ltd (Pretty Group)</h3><div class="date">August 2022 – Present</div><ul><li>Manage cutting-room operations, daily planning and target follow-up.</li><li>Monitor fabric utilization, marker efficiency, quality and wastage.</li><li>Coordinate with relevant departments to support production flow.</li><li>Buyer exposure: C&amp;A, NEW YORKER and COTTON ON.</li></ul></article>
+<article class="job"><h3>Cutting Manager — Amigo Bangladesh Ltd (Crystal Group)</h3><div class="date">June 2018 – July 2022</div><ul><li>Supervised cutting operations, manpower and production requirements.</li><li>Focused on quality, material utilization and timely output.</li><li>Buyer exposure: Puma.</li></ul></article>
+<article class="job"><h3>Cutting Assistant Manager — Jann Composite Ltd (Jann Group)</h3><div class="date">February 2016 – May 2018</div><ul><li>Supported cutting-room management, planning and operational control.</li><li>Worked with teams to meet production and quality requirements.</li></ul></article>
+<article class="job"><h3>Cutting In-charge — Jann Composite Ltd (Jann Group)</h3><div class="date">February 2013 – January 2016</div><ul><li>Handled day-to-day cutting activities and workforce coordination.</li><li>Followed cutting quality and production targets.</li></ul></article>
+<article class="job"><h3>Cutting Assistant In-charge — Jann Composite Ltd</h3><div class="date">July 2005 – October 2007</div><ul><li>Assisted with cutting operations and shop-floor coordination.</li></ul></article>
+<article class="job"><h3>Cutting Supervisor — Jann Composite Ltd</h3><div class="date">May 2002 – June 2005</div><ul><li>Supervised cutting-floor activities, workers and quality follow-up.</li></ul></article>
+</div>
+</div>
+</section>
 
-        <p>
-          Experienced RMG professional specializing in knit garment
-          cutting operations, fabric utilization, production planning,
-          cutting quality, and team management. Focused on improving
-          operational efficiency, controlling costs, and achieving
-          production targets.
-        </p>
+<section id="buyers">
+<div class="container">
+<div class="heading"><h2>Buyer Exposure</h2><p>International buyer experience reported in my career history.</p></div>
+<div class="buyers"><div class="buyer">C&amp;A</div><div class="buyer">NEW YORKER</div><div class="buyer">COTTON ON</div><div class="buyer">PUMA</div></div>
+</div>
+</section>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="#experience">
-            Explore Experience ↓
-          </a>
+<section id="education">
+<div class="container">
+<div class="heading"><h2>Education & Professional Training</h2><p>Academic background and professional development.</p></div>
+<div class="grid two-col">
+<div class="panel"><h3>Education</h3><p><strong>BA Hospitality Management</strong><br>College of Tourism and Hotel Management (Cyprus Foreign Institute), 2012</p><p><strong>International Certificate in Computer Study</strong><br>NCC Education UK, 2008</p><p><strong>SSC — Science</strong><br>Hashadah Secondary School, 1997</p></div>
+<div class="panel"><h3>Training</h3><p><strong>6S</strong> — Amigo Bangladesh Ltd, 2020</p><p><strong>Lean Manufacturing in Garments Factory</strong> — Amigo Bangladesh Ltd, 2019</p><p><strong>Garments Production Development</strong> — Jann Composite Ltd, 2015</p></div>
+</div>
+</div>
+</section>
 
-          <a class="btn btn-secondary"
-             href="https://www.linkedin.com/in/mdmahbuburmamun/"
-             target="_blank" rel="noopener noreferrer">
-            LinkedIn Profile ↗
-          </a>
+<section class="contact" id="contact">
+<div class="container">
+<div class="heading"><h2>Let's Connect</h2><p>For Cutting Manager opportunities and professional networking.</p></div>
+<div class="grid contact-grid">
+<div class="contact-card"><h3>Contact Information</h3><p><strong>Email:</strong><br><a href="mailto:mahbuburmbd@gmail.com">mahbuburmbd@gmail.com</a></p><p><strong>Phone:</strong><br><a href="tel:+8801534218837">+880 1534-218837</a></p><p><strong>Location:</strong><br>Chittagong Road, Siddhirganj, Narayanganj, Bangladesh</p></div>
+<div class="contact-card"><h3>Professional Profiles</h3><p>Connect with me for career opportunities, industry networking and professional collaboration.</p>
+<div class="socials">
+<a class="btn primary" href="https://www.linkedin.com/in/mdmahburburmamun/" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
+<a class="btn light-btn" href="https://www.facebook.com/mahbubai.creation/" target="_blank" rel="noopener noreferrer">Facebook Profile ↗</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
 
-          <button class="btn btn-secondary"
-                  type="button"
-                  onclick="window.print()">
-            Print / Save as PDF
-          </button>
-        </div>
-      </div>
-
-      <aside class="hero-panel">
-        <div class="hero-symbol" aria-hidden="true">✂️</div>
-
-        <h3>Cutting Room Management</h3>
-
-        <p>
-          Technical expertise, production discipline, fabric efficiency,
-          quality assurance, and effective workforce management.
-        </p>
-
-        <div class="stat-grid">
-          <div class="stat">
-            <strong>18.9</strong>
-            <span>Years in Garments*</span>
-          </div>
-
-          <div class="stat">
-            <strong>10</strong>
-            <span>Years in Cutting Management*</span>
-          </div>
-
-          <div class="stat">
-            <strong>CAD</strong>
-            <span>Marker & Cutting Workflow</span>
-          </div>
-
-          <div class="stat">
-            <strong>RMG</strong>
-            <span>Knit Garments</span>
-          </div>
-        </div>
-
-        <p style="font-size:.73rem;margin-top:14px;">
-          *Experience figures based on the supplied career profile.
-        </p>
-      </aside>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-
-      <div class="section-heading">
-        <div class="eyebrow">Professional Profile</div>
-        <h2>About <span>Me</span></h2>
-
-        <p class="section-intro">
-          I am a Garments Cutting Manager with 18.9 years of experience
-          in the garment industry, including 10 years in cutting
-          management. My core strengths include knit garment cutting,
-          fabric consumption, marker efficiency, spreading, lay planning,
-          production control, quality assurance, and workforce management.
-
-          I have experience with Lectra and Bullmer automatic cutting
-          systems and Boke and Lectra spreading machines. I coordinate
-          with CAD, Merchandising, Planning, Dyeing, Printing, Embroidery,
-          Sewing, and Quality teams to support smooth production flow
-          and timely delivery.
-        </p>
-      </div>
-
-      <div class="grid">
-
-        <article class="card">
-          <div class="card-icon">✂️</div>
-          <h3>Cutting Operations</h3>
-          <p>
-            Cutting floor supervision, fabric relaxation, spreading,
-            lay planning, cutting execution, and daily output monitoring.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">📐</div>
-          <h3>Fabric Efficiency</h3>
-          <p>
-            Fabric consumption monitoring, marker efficiency, fabric
-            utilization, and wastage reduction initiatives.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">👥</div>
-          <h3>Team & Production</h3>
-          <p>
-            Manpower allocation, production planning, cross-functional
-            coordination, quality monitoring, and target achievement.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-
-      <div class="section-heading">
-        <div class="eyebrow">Core Competencies</div>
-        <h2>Technical & <span>Management Skills</span></h2>
-
-        <p class="section-intro">
-          Practical skills relevant to modern knit garment cutting
-          operations and cutting room management.
-        </p>
-      </div>
-
-      <div class="grid">
-
-        <article class="card">
-          <div class="card-icon">⚙️</div>
-          <h3>Cutting Technology</h3>
-          <p>
-            Lectra and Bullmer auto cutters, Boke and Lectra spreading
-            machines, CAD coordination, cutting methods, and equipment
-            utilization.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">📏</div>
-          <h3>Fabric & Marker</h3>
-          <p>
-            Fabric consumption, marker efficiency, lay planning,
-            fabric inspection, GSM, dia, shade variation, and
-            shrinkage control.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">📊</div>
-          <h3>Planning & Cost Control</h3>
-          <p>
-            Daily production planning, fabric utilization, wastage
-            monitoring, manpower planning, machine utilization,
-            and operational cost control.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">✅</div>
-          <h3>Quality Assurance</h3>
-          <p>
-            Fabric quality checks, cutting accuracy, quality approvals,
-            buyer specifications, and coordination to prevent
-            downstream production issues.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">🤝</div>
-          <h3>Leadership & Coordination</h3>
-          <p>
-            Team supervision, problem-solving, communication,
-            cross-department coordination, and production reporting.
-          </p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">♻️</div>
-          <h3>Continuous Improvement</h3>
-          <p>
-            Lean Manufacturing principles, 6S practices, process
-            improvement, waste reduction, and productivity enhancement.
-          </p>
-        </article
+<footer>
+<p>© <span id="year"></span> MD Mahbubur Rahman Mamun | RMG Cutting Manager Portfolio</p>
+<p>Professional profile for career and networking purposes.</p>
+</footer>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
