@@ -2,168 +2,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MD. Mahbubur Rahman Mamun | Executive Portfolio</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#263448;background:#f5f8fb;line-height:1.7}
-nav{padding:18px 7%;display:flex;justify-content:space-between;align-items:center;background:#102b46;color:white;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;margin:6px}
-.hero{background:linear-gradient(125deg,#102b46,#176c79);color:white;padding:75px 8%;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
-.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:10px 0}
-.hero p{font-size:18px}
-.eyebrow{color:#70e0d0;font-weight:bold;letter-spacing:2px}
-.btn{display:inline-block;background:#13b8a6;color:#062b3c;padding:12px 22px;border-radius:6px;text-decoration:none;font-weight:bold;margin:8px 5px 0 0}
-section{padding:48px 8%;max-width:1250px;margin:auto}
-h2{color:#087f8c;font-size:29px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:white;border:1px solid #e1e9ef;border-radius:12px;padding:22px;box-shadow:0 5px 18px #102b460b}
-.tag{display:inline-block;background:#e1f5f2;color:#126e70;border-radius:5px;padding:6px 10px;margin:4px;font-size:14px}
-.timeline{border-left:3px solid #13b8a6;padding-left:22px}
-.job{margin:25px 0}
-.date{color:#087f8c;font-weight:bold}
-footer{background:#102b46;color:white;text-align:center;padding:28px}
-small{color:#607080}
-@media(max-width:600px){.hero{padding:45px 6%}section{padding:32px 6%}nav{padding:15px 5%}}
-</style>
-</head>
-<body>
-<nav>
-<strong>MAHBUBUR RAHMAN MAMUN</strong>
-<div>
-<a href="#about">About</a>
-<a href="#career">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="Mahbub AI Creation portfolio featuring AI-assisted video editing, cartoon creation, animation and digital storytelling.">
+  <title>Mahbub AI Creation | AI Video Editor & Cartoon Creator</title>
 
-<header class="hero">
-<div>
-<div class="eyebrow">GARMENTS MANUFACTURING · APPAREL OPERATIONS</div>
-<h1>MD. MAHBUBUR<br>RAHMAN MAMUN</h1>
-<h3>Cutting Manager | Apparel Industry</h3>
-<p>18+ years of garment industry experience, specializing in cutting operations, fabric consumption, marker planning, automated cutting and production quality.</p>
-<a class="btn" href="#career">VIEW EXPERIENCE</a>
-<a class="btn" href="#contact">CONTACT ME</a>
-</div>
+  <style>
+    :root {
+      --bg: #080d1b;
+      --surface: #111a2d;
+      --surface2: #17233a;
+      --text: #f3f6ff;
+      --muted: #aab6cc;
+      --cyan: #54e5e2;
+      --purple: #a99bff;
+      --border: rgba(255,255,255,.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 90%); margin: auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8,13,27,.96);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    .logo { font-size: 1.2rem; font-weight: 800; }
+    .logo span, h1 span, h2 span { color: var(--cyan); }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .nav-links a:hover, .text-link:hover { color: var(--cyan); }
+
+    section { padding: 75px 0; }
+
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 85% 25%, rgba(100,80,220,.2), transparent 35%),
+        radial-gradient(ellipse at 15% 75%, rgba(45,205,202,.12), transparent 35%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .78rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+    h3 { margin-bottom: 10px; }
+    p { color: var(--muted); }
+
+    .section-heading { margin-bottom: 30px; }
+    .section-intro { max-width: 700px; }
+
+    .actions, .social-links, .software-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 17px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: .9rem;
+      border: 1px solid var(--border);
+      transition: transform .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: #07121b;
+      background: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .btn-secondary { background: rgba(255,255,255,.04); }
+
+    .hero-art {
+      min-height: 300px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: linear-gradient(145deg, #17233e, #101528);
+      padding: 25px;
+    }
+
+    .hero-art .symbol {
+      font-size: 7rem;
+      filter: drop-shadow(0 10px 25px rgba(84,229,226,.2));
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card p { font-size: .93rem; }
+
+    .software-tag {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 8px 14px;
+      font-size: .9rem;
+    }
+
+    .project-art {
+      min-height: 145px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(84,229,226,.2), transparent 40%),
+        linear-gradient(140deg, #1c3151, #281d4a);
+      font-size: 4rem;
+      margin: -24px -24px 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--cyan);
+      background: rgba(84,229,226,.1);
+      border-radius: 20px;
+      padding: 4px 9px;
+      font-size: .75rem;
+      margin-bottom: 10px;
+    }
+
+    .text-link {
+      display: inline-block;
+      color: var(--cyan);
+      font-weight: 700;
+      margin-top: 14px;
+    }
+
+    .contact-box {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+
+    footer {
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 50px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 540px) {
+      section { padding: 52px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 12px; }
+      .contact-box { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Mahbub <span>AI Creation</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#channels">YouTube</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section id="about">
-<div class="eyebrow">PROFESSIONAL PROFILE</div>
-<h2>About Me</h2>
-<p>Experienced Garments Cutting Manager with a career spanning cutting supervision, in-charge responsibilities, assistant management and cutting management. Skilled in production planning, fabric relaxation, shrinkage testing, shade separation, marker control, quality assurance and wastage minimization.</p>
-<p>Committed to effective manpower utilization, production target achievement, on-time shipment and coordination with CAD, merchandising, dyeing, printing, embroidery and sewing teams.</p>
-<div class="grid">
-<div class="card"><h3>Cutting Operations</h3><p>Daily planning, lay planning, hourly production follow-up and shipment priorities.</p></div>
-<div class="card"><h3>Fabric Efficiency</h3><p>Consumption monitoring, marker planning, shrinkage and wastage control.</p></div>
-<div class="card"><h3>Quality & Leadership</h3><p>Cut-part quality, manpower coordination, compliance and team supervision.</p></div>
-</div>
-</section>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">AI-Assisted Creative Portfolio</div>
+        <h1>AI Video Editing &amp; <span>Cartoon Creation</span></h1>
+        <p>
+          Welcome to Mahbub AI Creation. I explore AI-assisted video editing,
+          cartoon characters, animation concepts, visual storytelling and
+          creative video projects for online audiences. I am interested in
+          remote creative opportunities and collaborative projects.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#portfolio">Explore My Projects</a>
+          <a class="btn btn-secondary"
+             href="https://www.youtube.com/@MahbubAICreation"
+             target="_blank" rel="noopener noreferrer">My YouTube Channel ↗</a>
+        </div>
+      </div>
 
-<section id="career">
-<div class="eyebrow">CAREER JOURNEY</div>
-<h2>Employment History</h2>
-<div class="timeline">
-<div class="job">
-<div class="date">August 2022 – Present</div>
-<h3>Cutting Manager</h3>
-<p><strong>Oxford Knit Composite Ltd. (Pretty Group)</strong></p>
-<p>Pre-cutting control, daily cutting plans, fabric consumption, shade separation, production monitoring, quality assurance and interdepartmental coordination.</p>
-<small>Buyers: C&A, NEW YORKER, COTTON ON and others</small>
-</div>
-<div class="job">
-<div class="date">June 2018 – July 2022</div>
-<h3>Cutting Manager</h3>
-<p><strong>Amigo Bangladesh Ltd. (Crystal Group)</strong></p>
-<small>Buyer: PUMA and others</small>
-</div>
-<div class="job">
-<div class="date">February 2016 – May 2018</div>
-<h3>Cutting Assistant Manager</h3>
-<p><strong>Jann Composite Ltd. (Jann Group)</strong></p>
-</div>
-<div class="job">
-<div class="date">February 2013 – January 2016</div>
-<h3>Cutting In-charge</h3>
-<p><strong>Jann Composite Ltd. (Jann Group)</strong></p>
-</div>
-<div class="job">
-<div class="date">July 2005 – October 2007</div>
-<h3>Cutting Assistant In-charge</h3>
-<p><strong>Jann Composite Ltd. (Jann Group)</strong></p>
-</div>
-<div class="job">
-<div class="date">May 2002 – June 2005</div>
-<h3>Cutting Supervisor</h3>
-<p><strong>Jann Composite Ltd. (Jann Group)</strong></p>
-</div>
-</div>
-</section>
+      <div class="hero-art">
+        <div>
+          <div class="symbol" aria-hidden="true">🎨</div>
+          <h3>Imagine. Create. Tell Stories.</h3>
+          <p>AI-assisted art · Cartoons · Video storytelling</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="skills">
-<div class="eyebrow">TECHNICAL EXPERTISE</div>
-<h2>Skills & Specialization</h2>
-<div>
-<span class="tag">Bullmer Auto Cutter</span>
-<span class="tag">Lectra Auto Cutter</span>
-<span class="tag">Boke Spreader</span>
-<span class="tag">Lectra Spreader</span>
-<span class="tag">Fabric Consumption</span>
-<span class="tag">Marker Efficiency</span>
-<span class="tag">Fabric Relaxation</span>
-<span class="tag">Shade Separation</span>
-<span class="tag">Shrinkage Testing</span>
-<span class="tag">GSM & Fabric Dia</span>
-<span class="tag">Cutting Production Planning</span>
-<span class="tag">Quality Control</span>
-<span class="tag">Manpower Management</span>
-<span class="tag">6S & Lean Manufacturing</span>
-<span class="tag">Microsoft Office</span>
-</div>
-</section>
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">About Me</div>
+        <h2>Creative Ideas, <span>Digital Stories</span></h2>
+        <p class="section-intro">
+          I am developing my creative portfolio around AI-assisted video,
+          cartoon concepts and character-based storytelling. My goal is to
+          create engaging visual content and continue improving my production
+          and editing skills.
+        </p>
+      </div>
 
-<section>
-<div class="eyebrow">EDUCATION & DEVELOPMENT</div>
-<h2>Academic Qualifications</h2>
-<div class="grid">
-<div class="card"><h3>BA in Hospitality Management</h3><p>College of Tourism and Hotel Management, Cyprus</p><small>2012</small></div>
-<div class="card"><h3>International Certificate in Computer Study</h3><p>NCC Education, Manchester, United Kingdom</p><small>2008</small></div>
-<div class="card"><h3>SSC — Science</h3><p>Hashadah Secondary School</p><small>1997</small></div>
-</div>
-<h2>Training</h2>
-<div class="grid">
-<div class="card"><h3>6S Method</h3><p>Workplace organization and continuous improvement.</p></div>
-<div class="card"><h3>Lean Manufacturing</h3><p>Garment factory process improvement.</p></div>
-<div class="card"><h3>Garments Production Development</h3><p>Training at Jann Composite Ltd.</p></div>
-</div>
-</section>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3>AI Video Projects</h3>
+          <p>Exploring AI-assisted video creation, cinematic scenes and digital storytelling.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🧑‍🎨</div>
+          <h3>Cartoon Characters</h3>
+          <p>Developing character ideas, visual styles and story-based cartoon concepts.</p>
+        </article>
+        <article class="card">
+          <div class="icon">📖</div>
+          <h3>Creative Stories</h3>
+          <p>Building story ideas for online videos, adventures and fictional worlds.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section>
-<div class="eyebrow">CUTTING PROCESS</div>
-<h2>Cutting Flow Chart</h2>
-<div class="card">
-<p>Fabric Receiving → Relaxation → Fabric Inspection → Spreading & Lay Planning → Marker Placement → Manual / Auto Cutting → Numbering → Bundling → Cut-Part Quality Audit → Printing (if required) → Sewing Section</p>
-</div>
-</section>
+  <section id="skills">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Skills &amp; Interests</div>
+        <h2>My Creative <span>Toolkit</span></h2>
+        <p class="section-intro">
+          Tools and creative areas I use or am exploring in my video and
+          animation workflow.
+        </p>
+      </div>
 
-<section id="contact">
-<div class="eyebrow">LET'S CONNECT</div>
-<h2>Contact Me</h2>
-<div class="card">
-<p><strong>Location:</strong> Chittagong Road, Siddhirganj, Narayanganj, Dhaka, Bangladesh</p>
-<p><strong>Email:</strong> <a href="mailto:mahbuburmbd@gmail.com">mahbuburmbd@gmail.com</a></p>
-<p><strong>Phone:</strong> <a href="tel:+8801534218837">01534218837</a></p>
-<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mdmahburburmamun/">View LinkedIn Profile</a></p>
-<a class="btn" href="mailto:mahbuburmbd@gmail.com">EMAIL ME</a>
-</div>
-</section>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">✨</div>
+          <h3>AI-Assisted Creation</h3>
+          <p>Prompt-based visuals, scene concepts and AI-assisted creative workflows.</p>
+        </article>
+        <article class="card">
+          <div class="icon">✂️</div>
+          <h3>Video Editing</h3>
+          <p>Video sequencing, pacing, transitions and storytelling-focused editing.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎭</div>
+          <h3>Character &amp; Animation Concepts</h3>
+          <p>Character ideas, cartoon storytelling and visual consistency.</p>
+        </article>
+      </div>
+
+      <div class="software-list">
+        <span class="software-tag">AI Video Tools</span>
+        <span class="software-tag">AI Image Tools</span>
+        <span class="software-tag">Video Editing</span>
+        <span class="software-tag">Cartoon Concepts</span>
+        <span class="software-tag">Visual Storytelling</span>
+        <span class="software-tag">YouTube Content</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Selected Work</div>
+        <h2>My Creative <span>Portfolio</span></h2>
+        <p class="section-intro">
+          Explore my creative themes and visit my YouTube channels to see
+          available video projects.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="project-art" aria-hidden="true">🎨</div>
+          <span class="tag">Character Concepts</span>
+          <h3>Cartoon Character Exploration</h3>
+          <p>Exploring character styles, appearance, colors and ideas for fictional stories.</p>
+        </article>
+
+        <article class="card">
+          <div class="project-art" aria-hidden="true">🏝️</div>
+          <span class="tag">Story Worlds</span>
+          <h3>Fantasy Environment Concepts</h3>
+          <p>Imagining landscapes, atmospheric settings and cinematic story environments.</p>
+        </article>
+
+        <article class="card">
+          <div class="project-art" aria-hidden="true">🎥</div>
+          <span class="tag">AI Video Projects</span>
+          <h3>Mahbub AI Creation</h3>
+          <p>AI-assisted videos, cartoon concepts and creative storytelling projects.</p>
+          <a class="text-link"
+             href="https://www.youtube.com/@MahbubAICreation"
+             target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="project-art" aria-hidden="true">🦸</div>
+          <span class="tag">Cartoon Channel</span>
+          <h3>Annafi Braveheart Boy</h3>
+          <p>Cartoon-style adventures and character-led story content.</p>
+          <a class="text-link"
+             href="https://www.youtube.com/@AnnafiBraveheartBoy26"
+             target="_blank" rel="noopener noreferrer">Visit Channel ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="project-art" aria-hidden="true">🔎</div>
+          <span class="tag">Adventure Stories</span>
+          <h3>Detective Ayan</h3>
+          <p>Detective-themed stories and character-based adventure projects.</p>
+          <a class="text-link"
+             href="https://www.youtube.com/@DetectiveAyan26"
+             target="_blank" rel="noopener noreferrer">Visit Channel ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="project-art" aria-hidden="true">▶️</div>
+          <span class="tag">Featured Video</span>
+          <h3>Bengali Adventure Video</h3>
+          <p>Visit the featured video to explore a story-based creative project.</p>
+          <a class="text-link"
+             href="https://www.youtube.com/watch?v=cxDaNDc3ehY"
+             target="_blank" rel="noopener noreferrer">Watch Video ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Watch My Work</div>
+        <h2>My YouTube <span>Channels</span></h2>
+        <p class="section-intro">
+          Visit the channels below to explore published videos and creative projects.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3>Mahbub AI Creation</h3>
+          <p>AI-assisted video projects, cartoon concepts and cinematic storytelling.</p>
+          <a class="btn btn-primary"
+             href="https://www.youtube.com/@MahbubAICreation"
+             target="_blank" rel="noopener noreferrer">Open Channel ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">🕵️</div>
+          <h3>Detective Ayan</h3>
+          <p>Detective adventures and story-based video projects.</p>
+          <a class="btn btn-secondary"
+             href="https://www.youtube.com/@DetectiveAyan26"
+             target="_blank" rel="noopener noreferrer">Open Channel ↗</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">🦸</div>
+          <h3>Annafi Braveheart Boy</h3>
+          <p>Cartoon adventures and character-led storytelling.</p>
+          <a class="btn btn-secondary"
+             href="https://www.youtube.com/@AnnafiBraveheartBoy26"
+             target="_blank" rel="noopener noreferrer">Open Channel ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="eyebrow">Contact &amp; Collaboration</div>
+        <h2>Let's Create Something <span>Meaningful</span></h2>
+        <p class="section-intro">
+          I am interested in remote creative opportunities related to AI-assisted
+          video editing, cartoon concepts, animation and digital storytelling.
+          You can explore my work and connect through the profiles below.
+        </p>
+
+        <div class="social-links">
+          <a class="btn btn-secondary"
+             href="https://www.linkedin.com/in/mdmahbuburmamun/"
+             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="btn btn-secondary"
+             href="https://www.facebook.com/mahbubai.creation/"
+             target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+          <a class="btn btn-secondary"
+             href="https://www.instagram.com/mr3115322026/"
+             target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a class="btn btn-secondary"
+             href="https://x.com/mahbubur_m99646"
+             target="_blank" rel="noopener noreferrer">X ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-<p><strong>MD. MAHBUBUR RAHMAN MAMUN</strong></p>
-<p>Garments Cutting Manager | Apparel Operations</p>
-<small>Professional Portfolio · Bangladesh</small>
+  <div class="container">
+    <p>© <span id="year"></span> Mahbub AI Creation. All rights reserved.</p>
+    <p>AI-assisted creative work and digital storytelling.</p>
+  </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
+
