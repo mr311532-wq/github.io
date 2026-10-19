@@ -1,251 +1,136 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MD Mahbubur Rahman Mamun — Garments Cutting Manager, Knit Composite Operations, fabric utilization, production planning and cutting-room leadership.">
-<title>MD Mahbubur Rahman Mamun | Garments Cutting Manager</title>
+<!-- CLIENT & BUYER COLLABORATION SECTION -->
+<section id="clients" class="client-section">
+  <div class="client-container">
+    <p class="client-label">PROFESSIONAL COLLABORATION</p>
+    <h2>Client & Buyer Collaboration</h2>
+    <p class="client-intro">
+      Supporting garment production teams through reliable cutting operations,
+      quality control, fabric utilization and timely production planning.
+    </p>
+
+    <div class="client-grid">
+      <article class="client-card">
+        <div class="client-icon">✂️</div>
+        <h3>Cutting Quality</h3>
+        <p>
+          Accurate cutting, panel inspection, shade segregation and
+          quality control to support buyer requirements.
+        </p>
+      </article>
+
+      <article class="client-card">
+        <div class="client-icon">📊</div>
+        <h3>Fabric Consumption</h3>
+        <p>
+          Marker efficiency, fabric consumption monitoring and
+          wastage-reduction initiatives.
+        </p>
+      </article>
+
+      <article class="client-card">
+        <div class="client-icon">🏭</div>
+        <h3>Production Coordination</h3>
+        <p>
+          Cutting plans, manpower allocation and timely
+          cut-panel feeding to support sewing-line targets.
+        </p>
+      </article>
+
+      <article class="client-card">
+        <div class="client-icon">✓</div>
+        <h3>Quality & Compliance</h3>
+        <p>
+          Following approved specifications, documented procedures
+          and factory quality requirements.
+        </p>
+      </article>
+    </div>
+
+    <div class="client-experience">
+      <h3>Garment Industry Experience</h3>
+      <p>
+        Oxford Knit Composite Ltd. · Amigo Bangladesh Ltd. ·
+        Jann Composite Ltd.
+      </p>
+      <span>
+        Professional employment history — not a claim of direct
+        client or buyer relationships.
+      </span>
+    </div>
+  </div>
+</section>
+
 <style>
-:root {
-  --bg:#081321;
-  --surface:#112238;
-  --surface2:#172c43;
-  --text:#eaf1f8;
-  --muted:#a9bacb;
-  --accent:#35d5c2;
-  --line:#294259;
+.client-section {
+  padding: 75px 22px;
+  background: linear-gradient(135deg, #071827, #102c3a, #07121f);
+  color: #f1f7fa;
+  font-family: Arial, sans-serif;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 Arial,Helvetica,sans-serif}
-a{color:var(--accent)}
-nav{background:#050d18;border-bottom:1px solid var(--line);padding:15px 7%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
-.brand{font-weight:800;color:white}
-nav a{text-decoration:none;margin-right:14px;font-size:14px}
-.hero{padding:70px 7%;display:flex;gap:35px;align-items:center;flex-wrap:wrap;background:linear-gradient(125deg,#0b1727,#143d52)}
-.profile{width:175px;height:175px;border-radius:50%;object-fit:cover;border:4px solid var(--accent);background:var(--surface)}
-.hero-copy{max-width:720px;flex:1}
-.kicker{color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:bold}
-h1{font-size:clamp(32px,5vw,54px);line-height:1.15;margin:12px 0}
-h2{font-size:30px;line-height:1.25;color:white;margin:8px 0 24px}
-h3{color:white;margin:0 0 8px}
-p{color:var(--muted)}
-.btn{display:inline-block;text-decoration:none;padding:11px 19px;border-radius:7px;background:var(--accent);color:#052029;font-weight:bold;margin:6px 8px 0 0}
-.btn.secondary{background:transparent;border:1px solid var(--accent);color:var(--accent)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:24px 7%;background:#0c1b2d}
-.stat,.card,.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:21px}
-.stat{text-align:center}
-.stat strong{display:block;font-size:24px;color:var(--accent)}
-.stat span{color:var(--muted);font-size:13px}
-section{padding:58px 7%;scroll-margin-top:20px}
-section:nth-of-type(even){background:#0b192a}
-.section-label{color:var(--accent);font-size:12px;letter-spacing:2px;font-weight:bold;text-transform:uppercase}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
-.tag{display:inline-block;padding:4px 10px;margin:4px 3px 4px 0;background:#153b46;color:#83f1e4;border-radius:20px;font-size:12px}
-.job{border-left:3px solid var(--accent);padding:0 0 25px 22px;margin-left:8px;position:relative}
-.job:before{content:"";position:absolute;left:-8px;top:8px;width:11px;height:11px;background:var(--accent);border-radius:50%}
-.date{color:var(--accent);font-size:13px;font-weight:bold}
-ul{padding-left:21px;color:var(--muted)}
-li{margin:6px 0}
-.process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.step{text-align:center}
-.step strong{display:block;color:var(--accent);margin-bottom:6px}
-.contact{background:#10243a!important}
-.contact a{overflow-wrap:anywhere}
-footer{text-align:center;padding:20px;background:#040a12;color:var(--muted);font-size:13px}
-@media(max-width:700px){
- .grid{grid-template-columns:1fr}
- .stats{grid-template-columns:1fr}
- .process{grid-template-columns:repeat(2,minmax(0,1fr))}
- .hero{padding-top:45px}
- nav a{display:inline-block;margin:5px 9px 5px 0}
+.client-container {
+  max-width: 1100px;
+  margin: auto;
+}
+.client-label {
+  color: #45d6c5;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.client-section h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 12px 0;
+}
+.client-intro {
+  max-width: 720px;
+  color: #b8cbd5;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.client-card {
+  background: rgba(255,255,255,.055);
+  border: 1px solid rgba(69,214,197,.24);
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform .2s, border-color .2s;
+}
+.client-card:hover {
+  transform: translateY(-5px);
+  border-color: #45d6c5;
+}
+.client-icon {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+.client-card h3,
+.client-experience h3 {
+  color: #45d6c5;
+  margin-bottom: 10px;
+}
+.client-card p {
+  color: #c5d5dc;
+  line-height: 1.75;
+  font-size: 14px;
+}
+.client-experience {
+  margin-top: 28px;
+  padding: 25px;
+  border-left: 3px solid #45d6c5;
+  background: rgba(255,255,255,.04);
+  border-radius: 8px;
+}
+.client-experience p {
+  line-height: 1.8;
+}
+.client-experience span {
+  color: #9fb5c1;
+  font-size: 12px;
+  line-height: 1.7;
 }
 </style>
-</head>
-<body>
-
-<nav>
-  <div class="brand">MRM <span style="color:#35d5c2">| CUTTING OPERATIONS</span></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#career">Career</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <img class="profile"
-    src="https://blogger.googleusercontent.com/img/a/AVvXsEhVyRT3NIL3pIXbuQcw7Lnb_CO09K7OO_-F2BaBN_teP4jBgAzXQzDdiQ0_kRQJvXtuDurKsmFydqoiovPoB4oQ4WSLDNc5yupYi9O5prehyPdVp97uAt1FFCgmUbQv7c8aqV3ne5Cw6bKNQmu43odZePM9sw4AM2GW3JQOTo5dYEWmE_Z2ZKPoUwxD_Dss=s16000"
-    alt="MD Mahbubur Rahman Mamun">
-  <div class="hero-copy">
-    <div class="kicker">Apparel Manufacturing Professional</div>
-    <h1>MD Mahbubur Rahman Mamun</h1>
-    <h3>Garments Cutting Manager | Knit Composite Operations</h3>
-    <p>Experienced garment industry professional focused on cutting-room operations, production planning, fabric utilization, cutting quality, team leadership and on-time sewing-line feeding.</p>
-    <a class="btn" href="#contact">Contact Me</a>
-    <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">Find Me on LinkedIn</a>
-  </div>
-</header>
-
-<div class="stats">
-  <div class="stat"><strong>18.9 Years</strong><span>Garment Industry Experience</span></div>
-  <div class="stat"><strong>10 Years</strong><span>Cutting Manager Experience</span></div>
-  <div class="stat"><strong>Bullmer / Lectra</strong><span>Auto-Cutting Equipment</span></div>
-</div>
-
-<section id="about">
-  <div class="section-label">Professional Profile</div>
-  <h2>About Me</h2>
-  <p>I am an apparel manufacturing professional experienced in knit and composite cutting-room operations. My expertise includes daily cutting plans, fabric consumption, marker coordination, spreading and auto-cutting operations, shade management, quality control, manpower utilization and production reporting.</p>
-  <p>My professional focus is to improve fabric utilization, reduce avoidable wastage, maintain cutting quality and coordinate with CAD, merchandising, fabric, dyeing and production teams.</p>
-</section>
-
-<section id="expertise">
-  <div class="section-label">Core Capabilities</div>
-  <h2>Technical Expertise</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>Cutting Machinery</h3>
-      <span class="tag">Bullmer Auto Cutter</span>
-      <span class="tag">Lectra Auto Cutter</span>
-      <span class="tag">Boke Spreader</span>
-      <span class="tag">Lectra Spreader</span>
-      <p>Cutting accuracy, spreading operations, equipment utilization and downtime monitoring.</p>
-    </article>
-    <article class="card">
-      <h3>Fabric & Consumption</h3>
-      <span class="tag">Fabric Consumption</span>
-      <span class="tag">Marker Efficiency</span>
-      <span class="tag">Fabric Relaxation</span>
-      <span class="tag">GSM & Dia</span>
-      <span class="tag">Shrinkage</span>
-      <span class="tag">Shade Control</span>
-      <p>Consumption planning, marker review, fabric inspection, shade segregation and wastage reduction.</p>
-    </article>
-    <article class="card">
-      <h3>Production Planning</h3>
-      <span class="tag">Daily Cutting Plan</span>
-      <span class="tag">Hourly Targets</span>
-      <span class="tag">Manpower Planning</span>
-      <span class="tag">KPI Reporting</span>
-      <p>Production targets, achievement tracking, resource allocation and on-time line feeding.</p>
-    </article>
-    <article class="card">
-      <h3>Quality & Leadership</h3>
-      <span class="tag">Cutting Quality</span>
-      <span class="tag">6S</span>
-      <span class="tag">Lean Manufacturing</span>
-      <span class="tag">Team Leadership</span>
-      <p>Risk assessment, quality checks, problem-solving, team direction and cross-functional coordination.</p>
-    </article>
-  </div>
-</section>
-
-<section id="career">
-  <div class="section-label">Professional Journey</div>
-  <h2>Career Experience</h2>
-
-  <div class="job">
-    <div class="date">August 2022 – Present</div>
-    <h3>Cutting Manager</h3>
-    <p><strong>Oxford Knit Composite Ltd — Pretty Group</strong></p>
-    <ul>
-      <li>Manage daily and master cutting plans according to production requirements.</li>
-      <li>Coordinate fabric relaxation, inspection, shade segregation, consumption and marker preparation.</li>
-      <li>Oversee auto-cutting and spreading operations, quality and productivity.</li>
-      <li>Monitor hourly targets, achievement, wastage, downtime, manpower and material utilization.</li>
-      <li>Coordinate with CAD, merchandising, dyeing, printing/embroidery and sewing teams.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="date">June 2018 – July 2022</div>
-    <h3>Cutting Manager</h3>
-    <p><strong>Amigo Bangladesh Ltd — Crystal Group</strong></p>
-    <p>Cutting-room production control, planning, quality, team supervision and fabric utilization.</p>
-  </div>
-
-  <div class="job">
-    <div class="date">February 2016 – May 2018</div>
-    <h3>Cutting Assistant Manager</h3>
-    <p><strong>Jann Composite Ltd — Jann Group</strong></p>
-    <p>Supported cutting operations, planning, manpower coordination and production follow-up.</p>
-  </div>
-
-  <div class="job">
-    <div class="date">February 2013 – January 2016</div>
-    <h3>Cutting In-charge</h3>
-    <p><strong>Jann Composite Ltd — Jann Group</strong></p>
-  </div>
-
-  <div class="job">
-    <div class="date">July 2005 – October 2007</div>
-    <h3>Cutting Assistant In-charge</h3>
-    <p><strong>Jann Composite Ltd — Jann Group</strong></p>
-  </div>
-
-  <div class="job">
-    <div class="date">May 2002 – June 2005</div>
-    <h3>Cutting Supervisor</h3>
-    <p><strong>Jann Composite Ltd — Jann Group</strong></p>
-  </div>
-</section>
-
-<section>
-  <div class="section-label">Operational Workflow</div>
-  <h2>Cutting Room Process</h2>
-  <div class="process">
-    <div class="step"><strong>01. Fabric</strong><p>Receive, inspect, relax and segregate shades.</p></div>
-    <div class="step"><strong>02. Planning</strong><p>Confirm consumption, marker and lay plan.</p></div>
-    <div class="step"><strong>03. Cutting</strong><p>Spread, cut, inspect quality and control recuts.</p></div>
-    <div class="step"><strong>04. Delivery</strong><p>Reconcile bundles, report output and feed sewing lines.</p></div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="section-label">Education & Development</div>
-  <h2>Education and Training</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>Education</h3>
-      <ul>
-        <li>BA in Hospitality Management — College of Tourism and Hotel Management, Cyprus Foreign Institute (2012)</li>
-        <li>International Certificate in Computer Study — NCC Education, UK (2008)</li>
-        <li>Diploma in Fundamental Course in Computer — Bhuiyan Institute of Technology, Dhaka (2001–2002)</li>
-        <li>SSC, Science — Hashadah Secondary School (1997)</li>
-      </ul>
-    </article>
-    <article class="card">
-      <h3>Professional Training</h3>
-      <ul>
-        <li>6S</li>
-        <li>Lean Manufacturing — Amigo Bangladesh Ltd (2020)</li>
-        <li>Garments Production Development — Jann Composite Ltd (2019)</li>
-      </ul>
-      <h3>Professional Strengths</h3>
-      <p>Team leadership, production planning, productivity improvement, quality focus, resource utilization and cross-functional communication.</p>
-    </article>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="section-label">Let's Connect</div>
-  <h2>Contact Me</h2>
-  <p>For professional opportunities in garment cutting-room operations and production management, please get in touch.</p>
-  <p><strong>Email:</strong> <a href="mailto:mahbuburmbd@gmail.com">mahbuburmbd@gmail.com</a></p>
-  <p><strong>Phone:</strong> <a href="tel:+8801534218837">+8801534218837</a></p>
-  <p><strong>Location:</strong> Narayanganj, Dhaka, Bangladesh</p>
-  <p>
-    <a href="https://mahbuburmamun.blogspot.com/" target="_blank" rel="noopener">Blogger</a> ·
-    <a href="https://www.facebook.com/mahbubai.creation/" target="_blank" rel="noopener">Facebook</a> ·
-    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-  </p>
-  <p style="font-size:13px">Replace the LinkedIn links with your confirmed public profile URL once you verify it.</p>
-</section>
-
-<footer>© 2026 MD Mahbubur Rahman Mamun · Garments Cutting Manager</footer>
-</body>
-</html>
